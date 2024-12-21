@@ -1627,7 +1627,10 @@ form ::-moz-placeholder {
 form :-ms-input-placeholder {
   color: #999;
 }
-
+button.submit-button {
+  padding: 25px 50px;
+  font-size: 18px;
+}
 /* Section/Article */
 
 section,

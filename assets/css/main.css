@@ -1389,12 +1389,17 @@ html {
 
 body {
   /* background-image: url("images/overlay.png"), url("images/bg.jpg"); */
-  background-image: url("images/overlay.png"),
-    url("https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg");
+  /* background-image: url("images/overlay.png"),
+    url("https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg"); */
+  background-color: #f8fafc;
   background-repeat: repeat, no-repeat;
   background-size: auto, 100% 100%;
   background-attachment: fixed;
   overflow-y: scroll;
+}
+.panel {
+  border-radius: 12px;
+  border: 1px solid lightgray;
 }
 
 body.is-preload *,
@@ -1790,8 +1795,7 @@ button.xlarge,
   input[type="button"],
   input[type="submit"],
   input[type="reset"],
-  button,
-  .button {
+  .submit-button {
     width: 100%;
   }
 }
@@ -1892,7 +1896,7 @@ ul.actions li:first-child {
 #nav a {
   position: relative;
   display: inline-block;
-  color: #ffffff;
+  color: #010101;
   width: 1em;
   height: 1em;
   line-height: 0.9em;
@@ -1914,21 +1918,21 @@ ul.actions li:first-child {
   font-size: 0.8em;
 }
 
-#nav a:after {
+/* #nav a:after {
   content: "";
   display: block;
   position: absolute;
   left: 50%;
   bottom: -0.75em;
   margin-left: -0.5em;
-  border-bottom: solid 0em #ffffff;
+  border-bottom: solid 0em darkgrey;
   border-left: solid 0.5em transparent;
   border-right: solid 0.5em transparent;
   -moz-transition: border-bottom-width 0.25s ease-in-out;
   -webkit-transition: border-bottom-width 0.25s ease-in-out;
   -ms-transition: border-bottom-width 0.25s ease-in-out;
   transition: border-bottom-width 0.25s ease-in-out;
-}
+} */
 
 #nav a span {
   display: block;
@@ -1988,9 +1992,9 @@ ul.actions li:first-child {
 #wrapper {
   width: 45em;
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   max-width: 100%;
-  padding: 4em 0;
+  padding: 3em 0;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2019,7 +2023,7 @@ body.is-preload #wrapper {
 
 @media screen and (max-width: 1280px) {
   #wrapper {
-    padding: 3em 0;
+    padding: 2em 0;
     max-width: calc(100% - 6em);
   }
 }
@@ -2052,7 +2056,6 @@ body.is-preload #wrapper {
   overflow: hidden;
   width: 100%;
   background: #ffffff;
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
   -moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
   -webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
   -ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -2082,7 +2085,7 @@ body.is-preload #wrapper {
 
 #main > .panel.intro {
   padding: 0;
-  height: 20em;
+  /* height: 20em; */
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2110,6 +2113,8 @@ body.is-preload #wrapper {
   flex-shrink: 0;
   width: 17em;
   height: 100%;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 #main > .panel.intro .pic:before {
@@ -2284,4 +2289,32 @@ body.is-preload #wrapper {
     padding-left: 0.5em;
     margin-left: 0.5em;
   }
+}
+
+.work-inr {
+  margin-bottom: 50px;
+}
+.work-inr:last-child {
+  margin-bottom: 0;
+}
+.work-video {
+  width: 100%;
+}
+.work-inr h3 {
+  color: #777777;
+  text-wrap: nowrap;
+}
+.work-inr p {
+  font-size: 16px;
+  line-height: normal;
+}
+.work-header {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-header button a {
+  color: #ffffff;
+  text-decoration: none;
 }

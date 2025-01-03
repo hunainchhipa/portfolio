@@ -2323,3 +2323,9 @@ p.about-me {
   font-size: 1em !important;
   line-height: 1.2em;
 }
+.spin-otr {
+  height: 500px;
+}
+.spin-video {
+  height: 100%;
+}

@@ -2318,3 +2318,8 @@ body.is-preload #wrapper {
   color: #ffffff;
   text-decoration: none;
 }
+
+p.about-me {
+  font-size: 1em !important;
+  line-height: 1.2em;
+}

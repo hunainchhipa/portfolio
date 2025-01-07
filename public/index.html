@@ -1,135 +1,92 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hunain Chhipa</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+	<link rel="stylesheet" href="/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 </head>
 
-<body class="is-preload">
+<body>
+	<div class="container my-5">
+		<!-- intro -->
+		<section id="intro">
+			<div class="d-flex justify-content-between align-items-center">
+				<div>
+					<h3 class="fw-bold">Hunain Chhipa</h3>
+					<div class="country d-flex align-items-baseline gap-2">
+						<i class="fa-solid fa-earth-asia"></i> <span>India, Ahmedabad</span>
+					</div>
+					<div class="d-flex gap-2 mt-3">
+						<a target="_blank" href="https://github.com/hunainchhipa">
+							<div class="icon-box d-flex justify-content-center align-items-center">
+								<i class="fa-brands fa-github social-icon"></i>
+							</div>
+						</a>
+						<a target="_blank" href="https://www.linkedin.com/in/hunain-chhipa-741558214">
+							<div class="icon-box d-flex justify-content-center align-items-center">
+								<i class="fa-brands fa-linkedin social-icon"></i>
+							</div>
+						</a>
+						<a target="_blank" href="https://x.com/hunainchhipa01">
+							<div class="icon-box d-flex justify-content-center align-items-center">
+								<i class="fa-brands fa-x-twitter social-icon"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="me">
+					<img src="assets/images/me.jpg" alt="me">
+				</div>
+			</div>
+			<div class="about-me mt-4">
+				<p class="description mb-1 sm-mb-2">
+					Hey, I’m Hunain Chhipa a 20-year-old passionate Frontend and React Developer, as well as an aspiring
+					MERN Stack Developer, who loves building user-friendly web apps and exploring new technologies.
+				</p>
+				<ul class="mb-0">
+					<li>
+						<p class="mb-0">Created a Spin and Win game in React to boost engagement at events.</p>
+					</li>
+					<li>
+						<p class="mb-0">Developed a fully functional music player using HTML, CSS, and JavaScript with
+							sleek UI/UX. </p>
+					</li>
+					<li>
+						<p class="mb-0">Built a 'Guess My Number' game during a Udemy course to enhance JavaScript
+							skills. </p>
+					</li>
+					<li>
+						<p class="mb-0">Won the 1st round of hackathons like Odoo with projects such as Space Hub and
+							Library Management. </p>
+					</li>
+					<li>
+						<p class="mb-0">Built several MERN projects, including Task Manager, Book Store, and Jobs API.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
 
-	<!-- Wrapper-->
-	<div id="wrapper">
-
-		<!-- Nav -->
-		<nav id="nav">
-			<a href="#" class="icon solid fa-home"><span>Home</span></a>
-			<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-			<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-			<a target="_blank" href="https://www.linkedin.com/in/hunain-chhipa-741558214/"
-				class="icon brands fa-linkedin"><span>LinkedIn</span></a>
-			<a target="_blank" href="https://www.github.com/hunainchhipa"
-				class="icon brands fa-github"><span>Github</span></a>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-			<!-- Me -->
-			<article id="home" class="panel intro">
-				<header>
-					<h1>HUNAIN CHHIPA</h1>
-					<p>Frontend Developer | React.js Enthusiast</p>
-					<!-- <p class="about-me">I am a passionate frontend developer with a strong enthusiasm for creating dynamic and
-						user-friendly web interfaces. Currently exploring the MERN stack, I love turning creative ideas
-						into functional applications.</p> -->
-				</header>
-				<img src="images/hunain.jpg" class="pic" alt="me" />
-			</article>
-
-			<!-- Work -->
-			<article id="work" class="panel">
-				<header>
-					<h2>Work</h2>
-				</header>
-				<section>
-					<div class="work-otr">
+		<!-- work -->
+		<section id="work">
+			<div class="work-otr mt-4 sm-mt-5">
+				<div class="card mb-3">
+					<div class="card-body">
 						<div class="work-inr">
-							<div class="work-header">
-								<h3>Good Life Coaches</h3><button><a target="_blank"
-										href="https://hunainchhipa.github.io/good-life-coaches/">Live
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Spin Game</h4><button><a target="_blank"
+										href="https://wbspingame.versionreview.com">Live
 										Demo</a></button>
-							</div>
-							<p>Designed and developed the Good Life Coaches website during my internship at WanBuffer
-								Services. This project involved converting a PSD design into a fully functional website
-								using HTML and CSS, ensuring pixel-perfect implementation and responsive design for an
-								optimal user experience.</p>
-							<video controls class="work-video" poster="/images/good-life-coaches.png"
-								src="assets/videos/good-life-coaches.mov"></video>
-						</div>
-						<div class="work-inr">
-							<div class="work-header">
-								<h3>The Mad Hatter</h3><button><a target="_blank"
-										href="https://hunainchhipa.github.io/the-mad-hatter/">Live
-										Demo</a></button>
-							</div>
-							<p>Developed The Mad Hatter website during my internship at WanBuffer Services. This project
-								focused on converting a PSD design into a responsive and visually appealing website
-								using HTML and CSS, showcasing attention to detail and design consistency.</p>
-							<video controls class="work-video" poster="/images/the-mad-hatter.png"
-								src="assets/videos/the-mad-hatter.mov"></video>
-						</div>
-						<div class="work-inr">
-							<div class="work-header">
-								<h3>Mattermark Clone</h3><button><a target="_blank"
-										href="https://mattermark-project.netlify.app">Live
-										Demo</a></button>
-							</div>
-							<p>Developed a Mattermark website clone using React.js during a React.js course at Tops
-								Technologies. This project involved replicating the functionality and design of the
-								original platform, enhancing my skills in component-based architecture, state
-								management, and responsive design.</p>
-							<video controls class="work-video" poster="/images/mattermark.png"
-								src="assets/videos/mattermark.mov"></video>
-						</div>
-						<div class="work-inr">
-							<div class="work-header">
-								<h3>Music Player</h3><button><a target="_blank"
-										href="https://github.com/hunainchhipa/music-player">Github</a></button>
-							</div>
-							<p>Built a fully functional music player application using HTML, CSS, and JavaScript. This
-								project allows users to play, pause, skip to the next or previous track, and use a range
-								bar to navigate specific parts of a song. The intuitive interface and seamless
-								functionality demonstrate strong JavaScript skills and a focus on enhancing user
-								experience.</p>
-							<video controls class="work-video" poster="/images/music-player.png"
-								src="assets/videos/music-player.mov"></video>
-						</div>
-						<div class="work-inr">
-							<div class="work-header">
-								<h3>Pig Game</h3><button><a target="_blank"
-										href="https://hunainchhipa.github.io/pig-game">Live Demo</a></button>
-							</div>
-							<p>Developed a Pig Game using JavaScript, HTML, and CSS. This interactive dice game allows
-								two players to compete by rolling dice to accumulate points. Players can choose to hold
-								their score or risk losing it by rolling a 1. The first player to reach the target score
-								wins. The project demonstrates my ability to implement game logic, create dynamic
-								interfaces, and deliver an engaging user experience.</p>
-							<video controls class="work-video" poster="/images/pig-game.png"
-								src="assets/videos/pig-game.mov"></video>
-						</div>
-						<div class="work-inr">
-							<div class="work-header">
-								<h3>Guess My Number</h3><button><a target="_blank"
-										href="https://hunainchhipa.github.io/guess-my-number">Live Demo</a></button>
-							</div>
-							<p>Created a 'Guess My Number' game using JavaScript, HTML, and CSS. In this interactive
-								game, players have 20 attempts to guess a randomly generated number between 1 and 20.
-								Each incorrect guess reduces the score, with the remaining attempts determining the
-								final score upon a correct guess. The game also tracks and updates the high score,
-								encouraging replayability. This project highlights my skills in game logic, event
-								handling, and creating a dynamic and engaging user experience.</p>
-							<video controls class="work-video" poster="/images/guess-my-number.png"
-								src="assets/videos/guess-my-number.mov"></video>
-						</div>
-						<div class="work-inr">
-							<div class="work-header">
-								<h3>Spin Game</h3><button><a target="_blank"
-										href="https://wbspingame.versionreview.com">Live Demo</a></button>
 							</div>
 							<p>Developed a Spin and Win web application using React.js, specifically designed with a
 								mobile-first approach to provide an optimal user experience on mobile devices. The app
@@ -137,26 +94,74 @@
 								allowing users to win various rewards. This project showcases my skills in creating
 								responsive designs and delivering engaging, mobile-friendly web applications.</p>
 							<div class="spin-otr">
-								<video controls class="work-video spin-video" poster="/images/spin-game.jpeg"
+								<video controls class="work-video spin-video" poster="assets/images/spin-game.jpeg"
 									src="assets/videos/spin-game.MP4"></video>
 							</div>
 						</div>
+					</div>
+				</div>
 
+				<div class="card mb-3">
+					<div class="card-body">
 						<div class="work-inr">
-							<div class="work-header">
-								<h3>Task Manager</h3><button><a target="_blank"
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Book Store</h4><button><a target="_blank"
+										href="https://github.com/hunainchhipa/mern-projects/tree/main/05-book-store">Github</a></button>
+							</div>
+							<p>Developed a Book Store application using the MERN stack. This app allows users to
+								upload
+								books, including book images, and provides functionality to edit or delete books. To
+								enhance the user experience, I integrated toast notifications to inform users when a
+								book is successfully uploaded or edited. This project showcases my ability to build
+								full-stack applications with image upload functionality, user-friendly interfaces,
+								and
+								real-time feedback features.</p>
+							<video controls class="work-video" poster="assets/images/book-store.png"
+								src="assets/videos/book-store.mov"></video>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Mattermark Clone</h4><button><a target="_blank"
+										href="https://mattermark-project.netlify.app">Live
+										Demo</a></button>
+							</div>
+							<p>Developed a Mattermark website clone using React.js during a React.js course at Tops
+								Technologies. This project involved replicating the functionality and design of the
+								original platform, enhancing my skills in component-based architecture, state
+								management, and responsive design.</p>
+							<video controls class="work-video" poster="/assets/images/mattermark.png"
+								src="assets/videos/mattermark.mov"></video>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Task Manager</h4><button><a target="_blank"
 										href="https://github.com/hunainchhipa/mern-projects/tree/main/01-task-manager">Github</a></button>
 							</div>
 							<p>Built a Task Manager application using the MERN stack. This app allows users to create,
 								manage, and track tasks with features like adding, editing, and deleting tasks. The
 								project showcases my ability to build full-stack applications, manage user data with
 								MongoDB, and create interactive user interfaces with React.</p>
-							<video controls class="work-video" poster="/images/task-manager.png"
+							<video controls class="work-video" poster="/assets/images/task-manager.png"
 								src="assets/videos/task-manager.mov"></video>
 						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
 						<div class="work-inr">
-							<div class="work-header">
-								<h3>Store App</h3><button><a target="_blank"
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Store App</h4><button><a target="_blank"
 										href="https://github.com/hunainchhipa/mern-projects/tree/main/02-store-app">Github</a></button>
 							</div>
 							<p>Created a Store App using the MERN stack
@@ -165,12 +170,17 @@
 								pagination for efficient browsing of products. This project highlights my skills in
 								full-stack development, implementing dynamic search and filter features, and ensuring a
 								smooth user experience with React and MongoDB.</p>
-							<video controls class="work-video" poster="/images/store-app.png"
+							<video controls class="work-video" poster="/assets/images/store-app.png"
 								src="assets/videos/store-app.mov"></video>
 						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
 						<div class="work-inr">
-							<div class="work-header">
-								<h3>JWT Authentication</h3><button><a target="_blank"
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">JWT Authentication</h4><button><a target="_blank"
 										href="https://github.com/hunainchhipa/mern-projects/tree/main/03-jwt-basics">Github</a></button>
 							</div>
 							<p>Developed a basic JWT authentication system using the MERN stack. The application ensures
@@ -179,144 +189,179 @@
 								generated and stored in local storage, granting secure access to the dashboard route.
 								This project demonstrates my ability to implement secure authentication mechanisms and
 								handle user authorization using JSON Web Tokens in a full-stack environment.</p>
-							<video controls class="work-video" poster="/images/jwt-authentication.png"
+							<video controls class="work-video" poster="/assets/images/jwt-authentication.png"
 								src="assets/videos/jwt-authentication.mov"></video>
 						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
 						<div class="work-inr">
-							<div class="work-header">
-								<h3>book Store</h3><button><a target="_blank"
-										href="https://github.com/hunainchhipa/mern-projects/tree/main/05-book-store">Github</a></button>
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Music Player</h4><button><a target="_blank"
+										href="https://github.com/hunainchhipa/music-player">Github</a></button>
 							</div>
-							<p>Developed a Book Store application using the MERN stack. This app allows users to upload
-								books, including book images, and provides functionality to edit or delete books. To
-								enhance the user experience, I integrated toast notifications to inform users when a
-								book is successfully uploaded or edited. This project showcases my ability to build
-								full-stack applications with image upload functionality, user-friendly interfaces, and
-								real-time feedback features.</p>
-							<video controls class="work-video" poster="/images/book-store.png"
-								src="assets/videos/book-store.mov"></video>
+							<p>Built a fully functional music player application using HTML, CSS, and JavaScript. This
+								project allows users to play, pause, skip to the next or previous track, and use a range
+								bar to navigate specific parts of a song. The intuitive interface and seamless
+								functionality demonstrate strong JavaScript skills and a focus on enhancing user
+								experience.</p>
+							<video controls class="work-video" poster="/assets/images/music-player.png"
+								src="assets/videos/music-player.mov"></video>
 						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
 						<div class="work-inr">
-							<div class="work-header">
-								<h3>Plugi (Email Verifier)</h3><button><a target="_blank" href="https://plugi.in">Live
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Good Life Coaches</h4><button><a target="_blank"
+										href="https://hunainchhipa.github.io/good-life-coaches/">Live
 										Demo</a></button>
 							</div>
-							<p>Developed the Plugi project, an advanced email verification solution, during my tenure at
-								WanBuffer Services. Plugi offers real-time verification capabilities and seamless
-								integration with various platforms, ensuring businesses maintain accurate and reliable
-								email lists. This project enhanced my skills in API integration, user interface design,
-								and delivering efficient solutions for digital marketing needs.</p>
-							<video controls class="work-video" poster="/images/plugi.png"
-								src="assets/videos/plugi.mov"></video>
+							<p>Designed and developed the Good Life Coaches website during my internship at WanBuffer
+								Services. This project involved converting a PSD design into a fully functional website
+								using HTML and CSS, ensuring pixel-perfect implementation and responsive design for an
+								optimal user experience.</p>
+							<video controls class="work-video" poster="/assets/images/good-life-coaches.png"
+								src="assets/videos/good-life-coaches.mov"></video>
 						</div>
 					</div>
+				</div>
 
-					<!-- //////////////////////// -->
-					<!-- <div class="row">
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://mattermark-project.netlify.app/" class="image fit"><img
-									src="images/mattermark.png" alt="cover">Mattermark Clone</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://plugi.in" class="image fit"><img src="images/plugi.png"
-									alt="cover">Plugi Email Verifier</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://hunainchhipa.github.io/good-life-coaches/"
-								class="image fit"><img src="images/good-life-coaches.png" alt="cover">Good
-								Life Coaches</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://hunainchhipa.github.io/the-mad-hatter/"
-								class="image fit"><img src="images/the-mad-hatter.png" alt="cover">The Mad
-								Hatter</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://github.com/hunainchhipa/music-player"
-								class="image fit"><img src="images/music-player.png" alt="cover">Music Player</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://github.com/ByteShah/website" class="image fit"><img
-									src="images/library.png" alt="cover">Library Management
-								Website</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank"
-								href="https://github.com/hunainchhipa/mern-projects/tree/main/01-task-manager"
-								class="image fit"><img src="images/task-manager.png" alt="cover">Task Manager</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank"
-								href="https://github.com/hunainchhipa/mern-projects/tree/main/02-store-app"
-								class="image fit"><img src="images/store-app.png" alt="cover">Store App</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank"
-								href="https://github.com/hunainchhipa/mern-projects/tree/main/03-jwt-basics"
-								class="image fit"><img src="images/jwt-basics.png" alt="cover">JWT Authentication</a>
-						</div>
-						<div class="col-6 col-12-small">
-							<a target="_blank"
-								href="https://github.com/hunainchhipa/mern-projects/tree/main/05-book-store"
-								class="image fit"><img src="images/book-store.png" alt="cover">Book Store</a>
-						</div>
-
-						<div class="col-6 col-12-small">
-							<a target="_blank" href="https://wbspingame.versionreview.com/spin" class="image fit"><img
-									src="images/spin.png" alt="cover">Spin & Win Game</a>
-						</div>
-					</div> -->
-				</section>
-			</article>
-
-			<!-- Contact -->
-			<article id="contact" class="panel">
-				<header>
-					<h2>Contact Me</h2>
-				</header>
-				<form id="contact-form">
-					<div>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<input type="text" name="user_name" placeholder="Name" required />
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">The Mad Hatter</h4><button><a target="_blank"
+										href="https://hunainchhipa.github.io/the-mad-hatter/">Live
+										Demo</a></button>
 							</div>
-							<div class="col-6 col-12-medium">
-								<input type="text" name="user_email" placeholder="Email" required />
-							</div>
-							<div class="col-12">
-								<input type="text" name="subject" placeholder="Subject" required />
-							</div>
-							<div class="col-12">
-								<textarea name="message" placeholder="Message" rows="6" required></textarea>
-							</div>
-							<div class="col-12">
-								<button type="submit" class="submit-button">Send Message</button>
-							</div>
+							<p>Developed The Mad Hatter website during my internship at WanBuffer Services. This project
+								focused on converting a PSD design into a responsive and visually appealing website
+								using HTML and CSS, showcasing attention to detail and design consistency.</p>
+							<video controls class="work-video" poster="/assets/images/the-mad-hatter.png"
+								src="assets/videos/the-mad-hatter.mov"></video>
 						</div>
 					</div>
-				</form>
-			</article>
+				</div>
 
-		</div>
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Pig Game</h4><button><a target="_blank"
+										href="https://hunainchhipa.github.io/pig-game">Live Demo</a></button>
+							</div>
+							<p>Developed a Pig Game using JavaScript, HTML, and CSS. This interactive dice game allows
+								two players to compete by rolling dice to accumulate points. Players can choose to hold
+								their score or risk losing it by rolling a 1. The first player to reach the target score
+								wins. The project demonstrates my ability to implement game logic, create dynamic
+								interfaces, and deliver an engaging user experience.</p>
+							<video controls class="work-video" poster="/assets/images/pig-game.png"
+								src="assets/videos/pig-game.mov"></video>
+						</div>
+					</div>
+				</div>
 
-		<!-- Footer -->
-		<div id="footer">
-			<ul class="copyright">
-				<li>&copy; 2024 Hunain Chhipa. All Rights Reserved.</li>
-			</ul>
-		</div>
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Guess My Number</h4><button><a target="_blank"
+										href="https://hunainchhipa.github.io/guess-my-number">Live Demo</a></button>
+							</div>
+							<p>Created a 'Guess My Number' game using JavaScript, HTML, and CSS. In this interactive
+								game, players have 20 attempts to guess a randomly generated number between 1 and 20.
+								Each incorrect guess reduces the score, with the remaining attempts determining the
+								final score upon a correct guess. The game also tracks and updates the high score,
+								encouraging replayability. This project highlights my skills in game logic, event
+								handling, and creating a dynamic and engaging user experience.</p>
+							<video controls class="work-video" poster="/assets/images/guess-my-number.png"
+								src="assets/videos/guess-my-number.mov"></video>
+						</div>
+					</div>
+				</div>
 
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Plugi (Email Verifier)</h4>
+							</div>
+							<p class="mb-1">Plugi is an advanced Email Verification Tool designed to validate email
+								addresses
+								effectively. Developed during my employment at WanBuffer Services, I was responsible for
+								designing and implementing all the pages in React, ensuring a visually appealing and
+								responsive user interface. My work focused on creating an intuitive user experience and
+								integrating the necessary components for seamless functionality.
+							</p>
+							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
+								Bootstrap 5.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Tothiq (Digital Contract Management)</h4>
+							</div>
+							<p class="mb-1">Tothiq is a comprehensive Digital Contract Management Solution that
+								simplifies the
+								management of contracts for businesses. During my employment at WanBuffer Services, I
+								contributed to the design and development of several pages and the integration of APIs
+								to enable seamless workflows. Additionally, I implemented a Material-UI theme to support
+								both RTL (Right-to-Left) and LTR (Left-to-Right) layouts, ensuring accessibility and
+								usability for diverse audiences.
+							</p>
+							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
+								Bootstrap 5, Material-UI, Ant Design.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">AI Jurist (Digital Contract Management)</h4>
+							</div>
+							<p class="mb-1">AI Jurist is a cutting-edge Digital Contract Management Platform that
+								leverages artificial intelligence for analyzing and managing legal contracts. During my
+								employment at WanBuffer Services, I developed the entire admin panel for this project,
+								focusing on creating a user-friendly and efficient interface. I also contributed to the
+								integration of APIs for several key pages, ensuring smooth data flow and functionality.
+							</p>
+							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
+								Bootstrap 5, Ant Design.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="work-inr">
+							<div class="work-header d-flex justify-content-between align-items-center mb-2">
+								<h4 class="fw-bold">Commodity Marketplace</h4>
+							</div>
+							<p class="mb-1">The Commodity Marketplace is a dynamic e-commerce platform for trading
+								commodities. During my employment at WanBuffer Services, I contributed by developing the
+								design of the platform, creating an intuitive and visually appealing user interface. I
+								also implemented a Mega Menu for efficient navigation and integrated APIs to enable
+								seamless data interactions across the platform.
+							</p>
+							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
+								Bootstrap 5.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
-
-	<!-- Scripts -->
-	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/contact.js"></script>
-
 </body>
 
 </html>

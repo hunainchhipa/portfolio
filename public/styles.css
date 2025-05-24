@@ -122,6 +122,15 @@ body {
     justify-content: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .project-card:hover .project-image {
+    opacity: 0;
+  }
+
+  .project-card:hover .project-video {
+    opacity: 1;
+  }
+}
 .project-card {
   position: relative;
   overflow: hidden;
@@ -139,12 +148,6 @@ body {
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
-}
-.project-card:hover .project-image {
-  opacity: 0;
-}
-.project-card:hover .project-video {
-  opacity: 1;
 }
 
 /* Project Modal Styles */

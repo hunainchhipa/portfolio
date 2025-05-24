@@ -1,0 +1,171 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #656567 #222831;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* About section specific styles */
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation for the doodle items */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Apply floating animation to the illustration */
+#about .relative img {
+  transition: all 0.3s ease;
+}
+
+#about .relative img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Enhance readability of text */
+#about p {
+  line-height: 1.8;
+  max-width: 90%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #about .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #about h2 {
+    text-align: center;
+  }
+
+  #about p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #about a {
+    display: block;
+    text-align: center;
+  }
+}
+
+#menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile menu fixes */
+#mobile-menu {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2rem 0;
+  min-height: 100svh;
+}
+
+#mobile-menu a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #mobile-menu a {
+    padding: 1rem 0;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  }
+
+  #mobile-menu a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Works section styles */
+#projects {
+  position: relative;
+  overflow: hidden;
+}
+
+#projects .group:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+#projects .group {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments for projects section */
+@media (max-width: 768px) {
+  #projects .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #projects h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  #projects .flex {
+    justify-content: center;
+  }
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+.project-image {
+  transition: opacity 0.3s;
+}
+.project-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.project-card:hover .project-image {
+  opacity: 0;
+}
+.project-card:hover .project-video {
+  opacity: 1;
+}
+
+/* Project Modal Styles */
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #modal-content {
+    padding: 1rem;
+  }
+
+  #modal-technologies span {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Animation for technology badges */
+#modal-technologies span {
+  transition: all 0.3s ease;
+}
+
+#modal-technologies span:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #4ecdc4;
+}

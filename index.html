@@ -2,367 +2,490 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hunain Chhipa</title>
-	<link rel="stylesheet" href="/index.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunain Chhipa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'teal-custom': '#4ECDC4',
+                        'dark-bg': '#222831',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
-	<div class="container my-5">
-		<!-- intro -->
-		<section id="intro">
-			<div class="d-flex justify-content-between align-items-center">
-				<div>
-					<h3 class="fw-bold">Hunain Chhipa</h3>
-					<div class="country d-flex align-items-baseline gap-2">
-						<i class="fa-solid fa-earth-asia"></i> <span>India, Ahmedabad</span>
-					</div>
-					<div class="d-flex gap-2 mt-3">
-						<a target="_blank" href="https://github.com/hunainchhipa">
-							<div class="icon-box d-flex justify-content-center align-items-center">
-								<i class="fa-brands fa-github social-icon"></i>
-							</div>
-						</a>
-						<a target="_blank" href="https://www.linkedin.com/in/hunainchhipa/">
-							<div class="icon-box d-flex justify-content-center align-items-center">
-								<i class="fa-brands fa-linkedin social-icon"></i>
-							</div>
-						</a>
-						<a target="_blank" href="https://x.com/hunainchhipa01">
-							<div class="icon-box d-flex justify-content-center align-items-center">
-								<i class="fa-brands fa-x-twitter social-icon"></i>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="me">
-					<img src="assets/images/me.jpg" alt="me">
-				</div>
-			</div>
-			<div class="about-me mt-4">
-				<p class="description mb-1 sm-mb-2">
-					Hey, I’m Hunain Chhipa a 20-year-old passionate Frontend and React Developer, as well as an aspiring
-					MERN Stack Developer, who loves building user-friendly web apps and exploring new technologies.
-				</p>
-				<ul class="mb-0">
-					<li>
-						<p class="mb-0">Created a Spin and Win game in React to boost engagement at events.</p>
-					</li>
-					<li>
-						<p class="mb-0">Developed a fully functional music player using HTML, CSS, and JavaScript with
-							sleek UI/UX. </p>
-					</li>
-					<li>
-						<p class="mb-0">Built a 'Guess My Number' game during a Udemy course to enhance JavaScript
-							skills. </p>
-					</li>
-					<li>
-						<p class="mb-0">Won the 1st round of hackathons like Odoo with projects such as Space Hub and
-							Library Management. </p>
-					</li>
-					<li>
-						<p class="mb-0">Built several MERN projects, including Task Manager, Book Store, and Jobs API.
-						</p>
-					</li>
-				</ul>
-			</div>
-		</section>
+    <!-- Navbar -->
+    <nav class="backdrop-blur-xl text-white px-5 py-8 border-b-2 border-[#363C44] fixed w-full top-0 z-50">
+        <div class="container mx-auto flex md:flex-row justify-between items-center">
+            <div class="text-xl font-bold cursor-default">Hunain Chhipa</div>
+            <button id="menu-toggle" class="md:hidden focus:outline-none z-50">
+                <span id="hamburger-icon" class="block">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </span>
+                <span id="close-icon" class="hidden">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
+            </button>
+            <div id="menu" class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-gray-300 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-gray-300 transition duration-300">About Me</a>
+                <a href="#projects" class="hover:text-gray-300 transition duration-300">Projects</a>
+                <a href="#contact" class="hover:text-gray-300 transition duration-300">Contact</a>
+            </div>
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-[#222831] bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-2xl font-semibold transition-transform duration-500 ease-in-out transform -translate-y-full md:hidden z-40 overflow-auto">
+                <a href="#home"
+                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Home</a>
+                <a href="#about"
+                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">About Me</a>
+                <a href="#projects"
+                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Projects</a>
+                <a href="#contact"
+                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-		<!-- work -->
-		<section id="work">
-			<div class="work-otr mt-4 sm-mt-5">
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Spin Game</h4><button><a target="_blank"
-										href="https://wbspingame.versionreview.com">Live
-										Demo</a></button>
-							</div>
-							<p>Developed a Spin and Win web application using React.js, specifically designed with a
-								mobile-first approach to provide an optimal user experience on mobile devices. The app
-								features an interactive spinning wheel with smooth animations and real-time feedback,
-								allowing users to win various rewards. This project showcases my skills in creating
-								responsive designs and delivering engaging, mobile-friendly web applications.</p>
-							<div class="spin-otr">
-								<video controls class="work-video spin-video" poster="assets/images/spin-game.jpeg"
-									src="assets/videos/spin-game.MP4"></video>
-							</div>
-						</div>
-					</div>
-				</div>
+    <!-- Hero Section -->
+    <section id="home" class="bg-dark-bg text-white pt-[94px]">
+        <div class="container mx-auto px-4 py-16 md:py-24 relative">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <!-- Left Content -->
+                <div class="md:w-1/2 z-10 mb-12 md:mb-0">
+                    <div class="relative">
+                        <img src="/assets/bg-images/Vector 187.png" alt="" class="absolute md:block hidden top-16">
+                        <h1
+                            class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight uppercase md:ms-20 text-center md:text-start">
+                            <span class="text-3xl">CREATIVE</span><br>
+                            <span class="text-teal-custom">FRONTEND DEVELOPER</span>
+                        </h1>
+                    </div>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Book Store</h4><button><a target="_blank"
-										href="https://github.com/hunainchhipa/mern-projects/tree/main/05-book-store">Github</a></button>
-							</div>
-							<p>Developed a Book Store application using the MERN stack. This app allows users to
-								upload
-								books, including book images, and provides functionality to edit or delete books. To
-								enhance the user experience, I integrated toast notifications to inform users when a
-								book is successfully uploaded or edited. This project showcases my ability to build
-								full-stack applications with image upload functionality, user-friendly interfaces,
-								and
-								real-time feedback features.</p>
-							<video controls class="work-video" poster="assets/images/book-store.png"
-								src="assets/videos/book-store.mov"></video>
-						</div>
-					</div>
-				</div>
+                    <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4 md:ms-20">
+                        <a href="#contact"
+                            class="bg-teal-custom text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition duration-300">Hire
+                            me</a>
+                        <a href="#"
+                            class="bg-transparent border border-gray-600 text-white px-6 py-3 rounded-full font-medium hover:border-gray-400 transition duration-300 flex items-center gap-2">
+                            Download CV
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Mattermark Clone</h4><button><a target="_blank"
-										href="https://mattermark-project.netlify.app">Live
-										Demo</a></button>
-							</div>
-							<p>Developed a Mattermark website clone using React.js during a React.js course at Tops
-								Technologies. This project involved replicating the functionality and design of the
-								original platform, enhancing my skills in component-based architecture, state
-								management, and responsive design.</p>
-							<video controls class="work-video" poster="/assets/images/mattermark.png"
-								src="assets/videos/mattermark.mov"></video>
-						</div>
-					</div>
-				</div>
+                <!-- Right Content - Illustration -->
+                <div class="md:w-1/2 relative">
+                    <!-- Doodles background -->
+                    <img src="assets/bg-images/doodles mixed round.png" alt=""
+                        class="absolute inset-0 w-full h-full object-contain z-0">
+                    <img src="assets/bg-images/Ellipse 3.png" alt="" class="absolute bottom-20 right-10 w-[50%]">
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Task Manager</h4><button><a target="_blank"
-										href="https://github.com/hunainchhipa/mern-projects/tree/main/01-task-manager">Github</a></button>
-							</div>
-							<p>Built a Task Manager application using the MERN stack. This app allows users to create,
-								manage, and track tasks with features like adding, editing, and deleting tasks. The
-								project showcases my ability to build full-stack applications, manage user data with
-								MongoDB, and create interactive user interfaces with React.</p>
-							<video controls class="work-video" poster="/assets/images/task-manager.png"
-								src="assets/videos/task-manager.mov"></video>
-						</div>
-					</div>
-				</div>
+                    <!-- Main illustration -->
+                    <div class="relative z-10 flex justify-end">
+                        <img src="assets/bg-images/Group 2346.png" alt="Designer illustration"
+                            class="max-w-full h-auto">
+                    </div>
+                </div>
+            </div>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Store App</h4><button><a target="_blank"
-										href="https://github.com/hunainchhipa/mern-projects/tree/main/02-store-app">Github</a></button>
-							</div>
-							<p>Created a Store App using the MERN stack
-								featuring advanced filtering options such as price range filtering (low to high and high
-								to low), company selection, and search functionality. Additionally, the app includes
-								pagination for efficient browsing of products. This project highlights my skills in
-								full-stack development, implementing dynamic search and filter features, and ensuring a
-								smooth user experience with React and MongoDB.</p>
-							<video controls class="work-video" poster="/assets/images/store-app.png"
-								src="assets/videos/store-app.mov"></video>
-						</div>
-					</div>
-				</div>
+            <!-- Scroll down indicator -->
+            <a href="#about"
+                class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-16 opacity-70 hover:opacity-100 transition duration-300">
+                <span class="text-sm mb-2">Scroll Down</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+    </section>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">JWT Authentication</h4><button><a target="_blank"
-										href="https://github.com/hunainchhipa/mern-projects/tree/main/03-jwt-basics">Github</a></button>
-							</div>
-							<p>Developed a basic JWT authentication system using the MERN stack. The application ensures
-								that users cannot access the dashboard route
-								without signing in or registering. Once a user registers or logs in, a JWT token is
-								generated and stored in local storage, granting secure access to the dashboard route.
-								This project demonstrates my ability to implement secure authentication mechanisms and
-								handle user authorization using JSON Web Tokens in a full-stack environment.</p>
-							<video controls class="work-video" poster="/assets/images/jwt-authentication.png"
-								src="assets/videos/jwt-authentication.mov"></video>
-						</div>
-					</div>
-				</div>
+    <!-- About Me Section -->
+    <section id="about" class="bg-dark-bg text-white pt-[94px]">
+        <div class="container mx-auto px-4 md:py-20 relative">
+            <!-- Decorative elements -->
+            <img src="assets/bg-images/lightbulb.png" alt=""
+                class="absolute top-12 left-[300px] w-16 hidden md:block z-10">
+            <img src="assets/bg-images/Vector 186.png" alt="" class="absolute bottom-10 left-40 w-32 hidden md:block">
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Music Player</h4><button><a target="_blank"
-										href="https://github.com/hunainchhipa/music-player">Github</a></button>
-							</div>
-							<p>Built a fully functional music player application using HTML, CSS, and JavaScript. This
-								project allows users to play, pause, skip to the next or previous track, and use a range
-								bar to navigate specific parts of a song. The intuitive interface and seamless
-								functionality demonstrate strong JavaScript skills and a focus on enhancing user
-								experience.</p>
-							<video controls class="work-video" poster="/assets/images/music-player.png"
-								src="assets/videos/music-player.mov"></video>
-						</div>
-					</div>
-				</div>
+            <div class="flex flex-col md:flex-row items-start justify-between">
+                <!-- Left Content - Fixed width 500px -->
+                <div class="w-full md:w-[500px]">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        About <span class="text-teal-custom">me</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6">
+                        I'm Hunain Chhipa, a passionate React developer with a strong foundation in front-end
+                        technologies. With over a year of professional
+                        experience, I've contributed to real-world projects like Tothiq, AI Jurist, and the Spinner
+                        Game, and developed full-stack applications such as a Book Store and a Library Management
+                        System.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        I enjoy crafting clean, responsive interfaces and scalable web solutions. From building dynamic
+                        components to integrating APIs, I’m always ready to take on new challenges and push my skills
+                        further.
+                    </p>
+                </div>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Good Life Coaches</h4><button><a target="_blank"
-										href="https://hunainchhipa.github.io/good-life-coaches/">Live
-										Demo</a></button>
-							</div>
-							<p>Designed and developed the Good Life Coaches website during my internship at WanBuffer
-								Services. This project involved converting a PSD design into a fully functional website
-								using HTML and CSS, ensuring pixel-perfect implementation and responsive design for an
-								optimal user experience.</p>
-							<video controls class="work-video" poster="/assets/images/good-life-coaches.png"
-								src="assets/videos/good-life-coaches.mov"></video>
-						</div>
-					</div>
-				</div>
+                <!-- Right Content - Illustration (takes remaining width) -->
+                <div class="w-full md:flex-1 relative md:h-[500px] hidden md:block">
+                    <!-- Doodles background -->
+                    <img src="assets/bg-images/doodle items.png" alt=""
+                        class="absolute inset-0 w-full h-full object-cover opacity-90 z-0">
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">The Mad Hatter</h4><button><a target="_blank"
-										href="https://hunainchhipa.github.io/the-mad-hatter/">Live
-										Demo</a></button>
-							</div>
-							<p>Developed The Mad Hatter website during my internship at WanBuffer Services. This project
-								focused on converting a PSD design into a responsive and visually appealing website
-								using HTML and CSS, showcasing attention to detail and design consistency.</p>
-							<video controls class="work-video" poster="/assets/images/the-mad-hatter.png"
-								src="assets/videos/the-mad-hatter.mov"></video>
-						</div>
-					</div>
-				</div>
+                    <!-- Main illustration -->
+                    <div class="relative z-10 flex justify-center items-center h-full">
+                        <img src="assets/bg-images/Group 62.png" alt="Developer at desk"
+                            class="w-full h-full object-contain">
+                        <img src="assets/bg-images/Ellipse 3.png" alt="" class="absolute -bottom-4 left-[25%] w-[50%]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Pig Game</h4><button><a target="_blank"
-										href="https://hunainchhipa.github.io/pig-game">Live Demo</a></button>
-							</div>
-							<p>Developed a Pig Game using JavaScript, HTML, and CSS. This interactive dice game allows
-								two players to compete by rolling dice to accumulate points. Players can choose to hold
-								their score or risk losing it by rolling a 1. The first player to reach the target score
-								wins. The project demonstrates my ability to implement game logic, create dynamic
-								interfaces, and deliver an engaging user experience.</p>
-							<video controls class="work-video" poster="/assets/images/pig-game.png"
-								src="assets/videos/pig-game.mov"></video>
-						</div>
-					</div>
-				</div>
+    <!-- Works Section -->
+    <section id="projects" class="bg-dark-bg text-white pt-[94px]">
+        <div class="relative md:py-20">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/bg-images/work-bg.png" alt="" class="w-full h-full object-cover opacity-70">
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-10">
+                    My recent <span class="text-teal-custom">works</span>
+                </h2>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Guess My Number</h4><button><a target="_blank"
-										href="https://hunainchhipa.github.io/guess-my-number">Live Demo</a></button>
-							</div>
-							<p>Created a 'Guess My Number' game using JavaScript, HTML, and CSS. In this interactive
-								game, players have 20 attempts to guess a randomly generated number between 1 and 20.
-								Each incorrect guess reduces the score, with the remaining attempts determining the
-								final score upon a correct guess. The game also tracks and updates the high score,
-								encouraging replayability. This project highlights my skills in game logic, event
-								handling, and creating a dynamic and engaging user experience.</p>
-							<video controls class="work-video" poster="/assets/images/guess-my-number.png"
-								src="assets/videos/guess-my-number.mov"></video>
-						</div>
-					</div>
-				</div>
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- The Mad Hatter -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/the-mad-hatter.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/the-mad-hatter.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Mattermark -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/mattermark.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/mattermark.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Music Player -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/music-player.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/music-player.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Book Store -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/book-store.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/book-store.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Good Life Coaches -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/good-life-coaches.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/good-life-coaches.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Store App -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/store-app.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/store-app.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Pig Game -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/pig-game.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/pig-game.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Guess My Number -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/guess-my-number.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/guess-my-number.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- Task Manager -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/task-manager.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/task-manager.mp4" muted loop preload="none"></video>
+                    </div>
+                    <!-- JWT Authentication -->
+                    <div
+                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
+                        <img src="assets/project-images/jwt-authentication.png" alt="image"
+                            class="project-image h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0" />
+                        <video
+                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10"
+                            src="assets/project-videos/jwt-authentication.mov" muted loop preload="none"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- WanBuffer Projects  -->
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Digital Contract Management</h4>
-							</div>
-							<p class="mb-1">Developed a comprehensive Digital Contract Management Solution to streamline
-								contract management for businesses. Contributed to designing and developing multiple
-								pages and integrating APIs to enable seamless workflows. Implemented a Material-UI theme
-								supporting both RTL (Right-to-Left) and LTR (Left-to-Right) layouts, ensuring
-								accessibility and usability for a global audience. Additionally, integrated CKEditor for
-								rich text editing, enhancing the user experience for managing contract content
-								effectively. This project highlights my expertise in creating user-centric interfaces
-								and implementing robust functionality for enterprise solutions.
-							</p>
-							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
-								Bootstrap 5, Material-UI, Ant Design.</p>
-						</div>
-					</div>
-				</div>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark-bg text-white pt-[94px] pb-16">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+                <!-- Left Content with Images -->
+                <div class="w-full md:w-1/2 relative">
+                    <div class="relative z-10">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-4">
+                            Got a project in
+                            <span class="text-teal-custom block">mind?</span>
+                        </h2>
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Email Verifier</h4>
-							</div>
-							<p class="mb-1">Developed an advanced Email Verification Tool designed to validate email
-								addresses effectively. I was responsible for designing and implementing all the pages in
-								React, ensuring a visually appealing and responsive user interface. My work focused on
-								creating an intuitive user experience and integrating the necessary components for
-								seamless functionality.
-							</p>
-							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
-								Bootstrap 5.</p>
-						</div>
-					</div>
-				</div>
+                        <!-- Person with chart illustration -->
+                        <div class="relative mt-8 flex justify-center">
+                            <img src="assets/bg-images/Group 2372.png" alt="Person with chart" class="" />
 
-				<div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">Marketplace</h4>
-							</div>
-							<p class="mb-1">The Marketplace is a dynamic e-commerce platform for trading
-								commodities. I contributed by developing the design of the platform, creating an
-								intuitive and visually appealing user interface. I also implemented a Mega Menu for
-								efficient navigation and integrated APIs to enable seamless data interactions across the
-								platform.
-							</p>
-							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
-								Bootstrap 5.</p>
-						</div>
-					</div>
-				</div>
+                            <!-- Decorative elements -->
+                            <img src="assets/bg-images/Vector 186.png" alt=""
+                                class="absolute left-0 top-10 w-32 rotate-180" />
+                            <img src="assets/bg-images/Ellipse 3.png" alt=""
+                                class="absolute -bottom-3 left-[11rem] w-40" />
+                        </div>
+                    </div>
+                </div>
 
-				<!-- <div class="card mb-3">
-					<div class="card-body">
-						<div class="work-inr">
-							<div class="work-header d-flex justify-content-between align-items-center mb-2">
-								<h4 class="fw-bold">AI Jurist (Digital Contract Management)</h4>
-							</div>
-							<p class="mb-1">AI Jurist is a cutting-edge Digital Contract Management Platform that
-								leverages artificial intelligence for analyzing and managing legal contracts. During my
-								employment at WanBuffer Services, I developed the entire admin panel for this project,
-								focusing on creating a user-friendly and efficient interface. I also contributed to the
-								integration of APIs for several key pages, ensuring smooth data flow and functionality.
-							</p>
-							<p><span class="fw-bold"> Technologies Used: </span> React.js, JSX, CSS, Redux Toolkit,
-								Bootstrap 5, Ant Design.</p>
-						</div>
-					</div>
-				</div> -->
-			</div>
-		</section>
-	</div>
+                <!-- Right Content - Contact Form -->
+                <div class="w-full md:w-1/2">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="user_name" class="block text-sm font-medium mb-2">Your name</label>
+                                <input type="text" id="user_name" autocomplete="off" name="user_name" placeholder="Name"
+                                    class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-custom"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="user_email" class="block text-sm font-medium mb-2">Your email</label>
+                                <input type="email" id="user_email" autocomplete="off" name="user_email"
+                                    placeholder="Email"
+                                    class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-custom"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Message" autocomplete="off"
+                                class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-custom"
+                                required></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit"
+                                class="bg-teal-custom hover:bg-teal-500 text-white font-medium rounded-md px-6 py-3 transition-colors duration-300 flex items-center">
+                                Send Message
+                                <i class="fa-solid fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="flex justify-end md:mt-8 me-8">
+                        <img src="/assets//bg-images/mail.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full bg-dark-bg text-white pt-16 pb-8 border-t-2 border-[#363C44]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col gap-5 justify-center items-center mb-10">
+                <div class="flex items-center space-x-14 mb-4 md:mb-0">
+                    <a href="#about" class="text-white hover:text-teal-custom transition-colors"><i
+                            class="fa-solid fa-user me-2"></i> About me
+                    </a>
+                    <a href="#contact" class="text-white hover:text-teal-custom transition-colors"><i
+                            class="fa-solid fa-phone me-2"></i> Contact</a>
+                    <a href="#projects" class="text-white hover:text-teal-custom transition-colors"><i
+                            class="fa-solid fa-keyboard me-2"></i>
+                        My Work</a>
+                </div>
+
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <a href="https://github.com/hunainchhipa" target="_blank" aria-label="GitHub"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hunainchhipa" target="_blank" aria-label="LinkedIn"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/hunain_chhipa" target="_blank" aria-label="Instagram"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/hunainchhipa01" target="_blank" aria-label="Twitter"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="text-sm text-gray-400 text-center md:text-end">
+                <a href="#" class="hover:text-teal-custom transition-colors">Terms of Service</a> - <a href="#"
+                    class="hover:text-teal-custom transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="project-modal"
+        class="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-40 invisible opacity-0 transition-opacity duration-300">
+        <div class="w-full max-w-4xl h-[85vh] max-h-[85vh] bg-[#2A2C31] rounded-t-3xl p-6 transform translate-y-full transition-transform duration-500 overflow-y-auto relative"
+            id="modal-content">
+            <button id="close-modal"
+                class="absolute top-4 right-4 text-white text-2xl bg-[#222831] hover:bg-[#1c2129] h-10 w-10 rounded-full z-50 flex items-center justify-center transition-colors duration-300">&times;</button>
+
+            <!-- Project title with gradient underline -->
+            <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-white mb-6 pb-2 relative">
+                <span
+                    class="inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-teal-custom after:to-blue-500 after:mt-1"></span>
+            </h2>
+
+            <!-- Video section -->
+            <div class="mb-8">
+                <video id="modal-video" class="w-full max-w-4xl rounded-lg shadow-xl mx-auto" controls muted
+                    loop></video>
+            </div>
+
+            <!-- Description section -->
+            <div class="mb-5 flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-teal-custom">Overview</h3>
+                <div class="text-center">
+                    <a id="modal-url" target="_blank"
+                        class="inline-flex items-center justify-center w-12 h-12 rounded-full text-white bg-teal-custom hover:bg-teal-500 transition-colors duration-300 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-external-link-icon lucide-external-link">
+                            <path d="M15 3h6v6" />
+                            <path d="M10 14 21 3" />
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <p id="modal-description" class="text-gray-300 leading-relaxed mb-8"></p>
+
+            <!-- Technologies section -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-teal-custom mb-3">Technologies</h3>
+                <div id="modal-technologies" class="flex flex-wrap gap-2">
+                    <!-- Technologies will be added here dynamically -->
+                </div>
+            </div>
+
+            <!-- Features section -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-teal-custom mb-3">Key Features</h3>
+                <ul id="modal-features" class="list-disc pl-5 text-gray-300 space-y-2">
+                    <!-- Features will be added here dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
+
+<!-- EmailJS Implementation -->
+<script src="script.js" type="module"></script>
+
+<script type="text/javascript">
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("P0T0AwGb7qYepWeHx"); // Your public key
+        })();
+
+    // Handle Form Submission
+    document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+
+            // Show sending status
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = `<span class=\"inline-block animate-pulse\">Sending...</span>`;
+            submitBtn.disabled = true;
+
+            // Send Email
+            emailjs.sendForm("service_povzevn", "template_rn2gimo", this)
+                .then(
+                    function () {
+                        // Success message
+                        alert("Message sent successfully!");
+                        document.getElementById("contact-form").reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    },
+                    function (error) {
+                        // Error message
+                        alert("Failed to send the message. Please try again later.");
+                        console.error("Error:", error);
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
+                );
+        });
+</script>
 
 </html>

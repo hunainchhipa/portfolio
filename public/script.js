@@ -147,3 +147,29 @@ function closeModal() {
     modalVideo.currentTime = 0;
   }, 300);
 }
+
+// Experience Tabs Functionality
+document.addEventListener("DOMContentLoaded", function() {
+  const companyTabs = document.querySelectorAll('.company-tab');
+  
+  companyTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs
+      companyTabs.forEach(t => t.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      tab.classList.add('active');
+      
+      // Hide all content sections
+      const allContent = document.querySelectorAll('.experience-content');
+      allContent.forEach(content => content.classList.remove('active'));
+      
+      // Show the corresponding content
+      const tabId = tab.getAttribute('data-tab');
+      const contentToShow = document.getElementById(`${tabId}-content`);
+      if (contentToShow) {
+        contentToShow.classList.add('active');
+      }
+    });
+  });
+});

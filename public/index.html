@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunain Chhipa</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/bg-images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -34,7 +35,7 @@
     <!-- Navbar -->
     <nav class="backdrop-blur-xl text-white px-5 py-8 border-b-2 border-[#363C44] fixed w-full top-0 z-50">
         <div class="container mx-auto flex md:flex-row justify-between items-center">
-            <div class="text-xl font-bold cursor-default">Hunain Chhipa</div>
+            <a href="#home" class="text-xl font-bold cursor-pointer">Hunain Chhipa</a>
             <button id="menu-toggle" class="md:hidden focus:outline-none z-50">
                 <span id="hamburger-icon" class="block">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,19 +51,19 @@
                 </span>
             </button>
             <div id="menu" class="hidden md:flex space-x-6">
-                <a href="#home" class="hover:text-gray-300 transition duration-300">Home</a>
                 <a href="#about" class="hover:text-gray-300 transition duration-300">About Me</a>
                 <a href="#projects" class="hover:text-gray-300 transition duration-300">Projects</a>
+                <a href="#experience" class="hover:text-gray-300 transition duration-300">Experience</a>
                 <a href="#contact" class="hover:text-gray-300 transition duration-300">Contact</a>
             </div>
             <div id="mobile-menu"
                 class="fixed inset-0 bg-[#222831] bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-2xl font-semibold transition-transform duration-500 ease-in-out transform -translate-y-full md:hidden z-40 overflow-auto">
-                <a href="#home"
-                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Home</a>
                 <a href="#about"
                     class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">About Me</a>
                 <a href="#projects"
                     class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Projects</a>
+                <a href="#experience"
+                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Experience</a>
                 <a href="#contact"
                     class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Contact</a>
             </div>
@@ -88,7 +89,7 @@
                         <a href="#contact"
                             class="bg-teal-custom text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition duration-300">Hire
                             me</a>
-                        <a href="#"
+                        <a href="/assets/Hunain Chhipa.pdf" download
                             class="bg-transparent border border-gray-600 text-white px-6 py-3 rounded-full font-medium hover:border-gray-400 transition duration-300 flex items-center gap-2">
                             Download CV
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -143,16 +144,19 @@
                         About <span class="text-teal-custom">me</span>
                     </h2>
                     <p class="text-gray-300 mb-6">
-                        I'm Hunain Chhipa, a passionate React developer with a strong foundation in front-end
-                        technologies. With over a year of professional
-                        experience, I've contributed to real-world projects like Tothiq, AI Jurist, and the Spinner
-                        Game, and developed full-stack applications such as a Book Store and a Library Management
-                        System.
+                        Hello! I'm Hunain Chhipa, a Frontend Developer with experience specializing in building
+                        responsive, user-centric web applications using React.js and modern web technologies. I've
+                        contributed to real-world projects like Digital Contract Management System, Email Verifier,
+                        Ecommerce Web application etc...
                     </p>
                     <p class="text-gray-300 mb-6">
-                        I enjoy crafting clean, responsive interfaces and scalable web solutions. From building dynamic
-                        components to integrating APIs, I’m always ready to take on new challenges and push my skills
-                        further.
+                        My expertise includes creating dynamic UI components, integrating RESTful APIs, and building
+                        scalable frontend architectures. I’m proficient in JavaScript, React, Redux, Zustand, Tailwind
+                        CSS and Bootstrap, with a keen eye for UI/UX and performance optimization.
+                    </p>
+                    <p class="text-gray-300">
+                        I’m passionate about turning complex requirements into clean, maintainable code and continuously
+                        expanding my skills to stay ahead in the ever-evolving web ecosystem.
                     </p>
                 </div>
 
@@ -281,6 +285,143 @@
         </div>
     </section>
 
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-dark-bg text-white pt-[94px]">
+        <div class="container mx-auto px-4 py-16 md:py-20 relative">
+            <!-- Decorative elements -->
+            <img src="assets/bg-images/Vector 186.png" alt="" class="absolute top-20 right-40 w-32 hidden md:block">
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-10">
+                Experience
+            </h2>
+
+            <!-- Experience Tabs Container -->
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Left side - Company Tabs -->
+                <div class="md:w-1/4">
+                    <div class="company-tabs space-y-4">
+                        <div class="company-tab active" data-tab="got2-india">
+                            <div
+                                class="p-4 rounded-lg bg-black/30 backdrop-blur-sm border-l-4 border-gray-700  cursor-pointer hover:bg-black/40 transition-all duration-300">
+                                <div class="text-white font-semibold text-xl">Vizograph Solutions</div>
+                                <div class="text-gray-400 text-sm">Frontend Developer</div>
+                            </div>
+                        </div>
+                        <div class="company-tab" data-tab="company-2">
+                            <div
+                                class="p-4 rounded-lg bg-black/30 backdrop-blur-sm border-l-4 border-gray-700 cursor-pointer hover:bg-black/40 transition-all duration-300">
+                                <div class="text-white font-semibold text-xl">Wanbuffer Services</div>
+                                <div class="text-gray-400 text-sm">ReactJS Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side - Experience Content -->
+                <div class="md:w-3/4">
+                    <div class="experience-content-container">
+                        <div class="experience-content active" id="got2-india-content">
+                            <div class="bg-black/30 backdrop-blur-sm rounded-lg p-6 md:p-8">
+                                <div class="flex flex-col md:flex-row justify-between mb-6">
+                                    <h3 class="text-2xl font-bold mb-2 md:mb-0">Frontend Developer @ Vizograph Solutions
+                                    </h3>
+                                    <div class="text-gray-400">
+                                        <div>Oct 2024 - Present</div>
+                                        <div>Ahmedabad, Gujarat</div>
+                                    </div>
+                                </div>
+
+                                <!-- Achievements/Responsibilities -->
+                                <ul class="space-y-4 text-gray-300">
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Built an easy-to-use chart editor with ApexCharts.js that lets users create,
+                                        customize, and visualize different types of charts effortlessly.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Designed an intuitive drag-and-resize interface, enabling seamless customization
+                                        of chart layouts and enhancing overall usability.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Implemented dynamic series and row addition, giving users flexibility to expand
+                                        and fine-tune their data visualizations in real time.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Developed interactive color customization features, allowing users to modify
+                                        individual chart elements such as bars, treemap, bubble and more for better
+                                        clarity and visual appeal.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Added multi-format export options, enabling users to download their projects in
+                                        multiple formats such as PNG, SVG, and JPEG for versatile usage.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="experience-content hidden" id="company-2-content">
+                            <div class="bg-black/30 backdrop-blur-sm rounded-lg p-6 md:p-8">
+                                <div class="flex flex-col md:flex-row justify-between mb-6">
+                                    <h3 class="text-2xl font-bold mb-2 md:mb-0">ReactJS Developer @ Wanbuffer Services
+                                    </h3>
+                                    <div class="text-gray-400">
+                                        <div>Aug 2023 - Aug 2024</div>
+                                        <div>Ahmedabad, Gujarat</div>
+                                    </div>
+                                </div>
+
+                                <!-- Achievements/Responsibilities -->
+                                <ul class="space-y-4 text-gray-300">
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Built a multilingual digital contract management platform supporting English,
+                                        Arabic, French, and Spanish for individual and business users.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Developed contract creation and management features with seamless integration of
+                                        Google Drive and OneDrive for secure document storage.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Integrated Google and Microsoft OAuth for secure and user-friendly
+                                        authentication across multiple platforms.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Designed and implemented a real-time email verification tool with third-party
+                                        API integrations, enabling users to validate email addresses with ease.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Created a responsive, mobile-first “Spin and Win” web app with interactive
+                                        animations to drive user engagement during company events.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Developed an eCommerce website with a dynamic Mega Menu featuring smooth
+                                        transitions and real-time category data fetched via APIs.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-teal-custom mr-2">›</span>
+                                        Enhanced the overall user experience through clean UI/UX design, smooth
+                                        transitions, and real-time feedback across applications.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="bg-dark-bg text-white pt-[94px] pb-16">
         <div class="container mx-auto px-4 py-16">
@@ -351,15 +492,18 @@
     <footer class="w-full bg-dark-bg text-white pt-16 pb-8 border-t-2 border-[#363C44]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col gap-5 justify-center items-center mb-10">
-                <div class="flex items-center space-x-4 md:space-x-14 mb-4 md:mb-0">
+                <div class="flex flex-wrap items-center justify-center gap-3 space-x-4 md:space-x-14 mb-4 md:mb-0">
                     <a href="#about" class="text-white hover:text-teal-custom transition-colors"><i
                             class="fa-solid fa-user me-2"></i> About me
                     </a>
-                    <a href="#contact" class="text-white hover:text-teal-custom transition-colors"><i
-                            class="fa-solid fa-phone me-2"></i> Contact</a>
                     <a href="#projects" class="text-white hover:text-teal-custom transition-colors"><i
                             class="fa-solid fa-keyboard me-2"></i>
                         My Work</a>
+                    <a href="#experience" class="text-white hover:text-teal-custom transition-colors"><i
+                            class="fa-solid fa-briefcase me-2"></i> Experience
+                    </a>
+                    <a href="#contact" class="text-white hover:text-teal-custom transition-colors"><i
+                            class="fa-solid fa-phone me-2"></i> Contact</a>
                 </div>
 
                 <div class="flex space-x-4 mb-4 md:mb-0">

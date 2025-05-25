@@ -163,3 +163,59 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #4ecdc4;
 }
+
+/* Experience section styles */
+#experience {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Company tabs styling */
+.company-tab {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-tab:hover {
+  transform: translateY(-2px);
+}
+
+.company-tab.active div {
+  border-color: #4ecdc4;
+}
+
+.company-tab.active .text-white {
+  color: #4ecdc4;
+}
+
+/* Experience content styling */
+.experience-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.experience-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for experience section */
+@media (max-width: 768px) {
+  #experience .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #experience h2 {
+    text-align: center;
+  }
+}

@@ -71,13 +71,34 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 document.querySelectorAll(".project-card").forEach((card) => {
   const video = card.querySelector(".project-video");
+  let playPromise;
+
   card.addEventListener("mouseenter", () => {
     video.currentTime = 0;
-    video.play();
+    playPromise = video.play();
+
+    // Handle the play promise
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        // Auto-play was prevented or interrupted
+        // We can ignore this error
+      });
+    }
   });
+
   card.addEventListener("mouseleave", () => {
-    video.pause();
-    video.currentTime = 0;
+    // Only pause if the play promise has resolved
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          video.pause();
+          video.currentTime = 0;
+        })
+        .catch((error) => {
+          // Auto-play was prevented or interrupted
+          // We can ignore this error
+        });
+    }
   });
 });
 
@@ -149,26 +170,26 @@ function closeModal() {
 }
 
 // Experience Tabs Functionality
-document.addEventListener("DOMContentLoaded", function() {
-  const companyTabs = document.querySelectorAll('.company-tab');
-  
-  companyTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+document.addEventListener("DOMContentLoaded", function () {
+  const companyTabs = document.querySelectorAll(".company-tab");
+
+  companyTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
       // Remove active class from all tabs
-      companyTabs.forEach(t => t.classList.remove('active'));
-      
+      companyTabs.forEach((t) => t.classList.remove("active"));
+
       // Add active class to clicked tab
-      tab.classList.add('active');
-      
+      tab.classList.add("active");
+
       // Hide all content sections
-      const allContent = document.querySelectorAll('.experience-content');
-      allContent.forEach(content => content.classList.remove('active'));
-      
+      const allContent = document.querySelectorAll(".experience-content");
+      allContent.forEach((content) => content.classList.remove("active"));
+
       // Show the corresponding content
-      const tabId = tab.getAttribute('data-tab');
+      const tabId = tab.getAttribute("data-tab");
       const contentToShow = document.getElementById(`${tabId}-content`);
       if (contentToShow) {
-        contentToShow.classList.add('active');
+        contentToShow.classList.add("active");
       }
     });
   });

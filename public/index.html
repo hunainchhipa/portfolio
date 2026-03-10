@@ -72,20 +72,25 @@
 
     <!-- Hero Section -->
     <section id="home" class="bg-dark-bg text-white pt-[94px]">
-        <div class="container mx-auto px-4 py-16 md:py-24 relative">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10 relative hero-fade-in">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
                 <!-- Left Content -->
                 <div class="md:w-1/2 z-10 mb-12 md:mb-0">
                     <div class="relative">
                         <img src="/assets/bg-images/Vector 187.png" alt="" class="absolute md:block hidden top-16">
                         <h1
-                            class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight uppercase md:ms-20 text-center md:text-start">
-                            <!-- <span class="text-3xl">CREATIVE</span><br> -->
-                            <span class="text-teal-custom">FULL STACK DEVELOPER</span>
+                            class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:ms-20 text-center md:text-start">
+                            <span class="text-teal-custom block">Full Stack Developer</span>
+                            <span class="text-teal-custom block mt-2">React & MERN Specialist</span>
                         </h1>
+                        <p
+                            class="text-slate-300 text-lg md:text-xl mt-4 md:ms-20 text-center md:text-start max-w-2xl leading-relaxed">
+                            2.5+ years building scalable web applications using React, Node.js, and modern UI
+                            frameworks.
+                        </p>
                     </div>
 
-                    <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4 md:ms-20">
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4 md:ms-20">
                         <a href="#contact"
                             class="bg-teal-custom text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition duration-300">Hire
                             me</a>
@@ -116,47 +121,76 @@
                 </div>
             </div>
 
-            <!-- Scroll down indicator -->
-            <a href="#about"
-                class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-16 opacity-70 hover:opacity-100 transition duration-300">
-                <span class="text-sm mb-2">Scroll Down</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="bg-dark-bg text-white py-10">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Stat 1: Years of Experience -->
+                <div
+                    class="stats-card bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-teal-custom transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-custom/20">
+                    <div class="text-4xl md:text-5xl font-bold text-teal-custom mb-2">
+                        2.5+</div>
+                    <div class="text-lg font-semibold text-white mb-1">Years</div>
+                    <div class="text-sm text-slate-400">Professional Experience</div>
+                </div>
+
+                <!-- Stat 2: Projects -->
+                <div
+                    class="stats-card bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-teal-custom transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-custom/20">
+                    <div class="text-4xl md:text-5xl font-bold text-teal-custom mb-2">
+                        10+</div>
+                    <div class="text-lg font-semibold text-white mb-1">Projects</div>
+                    <div class="text-sm text-slate-400">Completed Successfully</div>
+                </div>
+
+                <!-- Stat 3: Production Systems -->
+                <div
+                    class="stats-card bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-teal-custom transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-custom/20">
+                    <div class="text-4xl md:text-5xl font-bold text-teal-custom mb-2">
+                        3+</div>
+                    <div class="text-lg font-semibold text-white mb-1">Production</div>
+                    <div class="text-sm text-slate-400">Systems Built</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Me Section -->
     <section id="about" class="bg-dark-bg text-white pt-[94px]">
-        <div class="container mx-auto px-4 md:py-20 relative">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10 relative">
             <!-- Decorative elements -->
             <img src="assets/bg-images/lightbulb.png" alt=""
-                class="absolute top-12 left-[300px] w-16 hidden md:block z-10">
-            <img src="assets/bg-images/Vector 186.png" alt="" class="absolute bottom-10 left-40 w-32 hidden md:block">
+                class="absolute top-12 left-[300px] w-16 hidden lg:block z-10 opacity-80">
+            <img src="assets/bg-images/Vector 186.png" alt=""
+                class="absolute bottom-10 left-40 w-32 hidden lg:block opacity-60">
 
-            <div class="flex flex-col md:flex-row items-start justify-between">
-                <!-- Left Content - Fixed width 500px -->
-                <div class="w-full md:w-[500px]">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <div class="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12">
+                <!-- Left Content -->
+                <div class="w-full md:w-[55%] lg:w-[500px]">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5">
                         About <span class="text-teal-custom">me</span>
                     </h2>
-                    <p class="text-gray-300 mb-6">
-                        Hello! I'm Hunain Chhipa, a Frontend Developer with experience specializing in building
-                        responsive, user-centric web applications using React.js and modern web technologies. I've
-                        contributed to real-world projects like Digital Contract Management System, Email Verifier,
-                        Ecommerce Web application etc...
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Hello! I'm Hunain Chhipa, a Full Stack Developer with 2.5+ years of professional experience
+                        building production-ready web applications. I specialize in the MERN stack (MongoDB, Express.js,
+                        React, Node.js) and modern frontend frameworks, delivering scalable solutions for real-world
+                        business challenges.
                     </p>
-                    <p class="text-gray-300 mb-6">
-                        My expertise includes creating dynamic UI components, integrating RESTful APIs, and building
-                        scalable frontend architectures. I’m proficient in JavaScript, React, Redux, Zustand, Tailwind
-                        CSS and Bootstrap, with a keen eye for UI/UX and performance optimization.
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Currently at Vizograph Solutions, I build interactive chart editors and data visualization tools
+                        using ApexCharts and React. Previously at Wanbuffer Services, I developed enterprise
+                        applications including multilingual contract management systems and email verification
+                        platforms.
                     </p>
-                    <p class="text-gray-300">
-                        I’m passionate about turning complex requirements into clean, maintainable code and continuously
-                        expanding my skills to stay ahead in the ever-evolving web ecosystem.
+                    <p class="text-slate-300 leading-relaxed">
+                        My flagship project, <span class="text-teal-custom font-semibold">StyleCreation</span>, is a
+                        comprehensive garment workflow management system used in production environments to track
+                        orders, vendors, and manufacturing stages from entry to delivery. This project showcases my
+                        ability to architect full-stack solutions with real-time analytics, AWS integration, and complex
+                        state management.
                     </p>
                 </div>
 
@@ -177,14 +211,115 @@
         </div>
     </section>
 
+    <!-- Featured Project Section -->
+    <section id="featured-project" class="bg-dark-bg text-white py-10">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                Featured <span class="text-teal-custom">Project</span>
+            </h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="featured-project-card bg-gradient-to-br from-teal-custom/10 via-slate-800/60 to-purple-900/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-slate-700 hover:border-teal-custom/50 transition-all duration-300 shadow-xl">
+
+                    <!-- Project Title -->
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">
+                        StyleCreation – Garment Workflow Management System
+                    </h3>
+
+                    <!-- Description -->
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        A production workflow management system built for garment factories to track orders,
+                        vendors, and production stages from entry to delivery. This full-stack application streamlines
+                        manufacturing operations with real-time tracking and analytics.
+                    </p>
+
+                    <!-- Key Features -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-teal-custom mb-3 uppercase tracking-wider">
+                            Key Features
+                        </h4>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-slate-300 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-teal-custom mr-2 mt-0.5">•</span>
+                                <span>Production workflow tracking across multiple stages</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-custom mr-2 mt-0.5">•</span>
+                                <span>Real-time analytics dashboards with interactive charts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-custom mr-2 mt-0.5">•</span>
+                                <span>Vendor and product management system</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-custom mr-2 mt-0.5">•</span>
+                                <span>AWS S3 integration for image uploads</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-custom mr-2 mt-0.5">•</span>
+                                <span>Advanced search and filtering capabilities</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tech Stack with bullet separators -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-teal-custom mb-3 uppercase tracking-wider">
+                            Tech Stack
+                        </h4>
+                        <div class="flex flex-wrap items-center gap-2 text-slate-300 text-sm">
+                            <span class="font-medium">React</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">Node.js</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">Express</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">MongoDB</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">Tailwind</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">Zustand</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">AWS S3</span>
+                            <span class="text-teal-custom">•</span>
+                            <span class="font-medium">ApexCharts</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://stylecreation.in" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center px-5 py-2.5 bg-teal-custom text-white font-medium text-sm rounded-lg hover:bg-teal-500 transition-all duration-300 shadow-md hover:shadow-lg">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
+                            Live Project
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center px-5 py-2.5 bg-slate-700 text-white font-medium text-sm rounded-lg hover:bg-slate-600 transition-all duration-300 border border-slate-600">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Works Section -->
     <section id="projects" class="bg-dark-bg text-white pt-[94px]">
-        <div class="relative md:py-20">
+        <div class="relative py-10">
             <div class="absolute inset-0 z-0">
-                <img src="assets/bg-images/work-bg.png" alt="" class="w-full h-full object-cover opacity-70">
+                <img src="assets/bg-images/work-bg.png" alt="" class="w-full h-full object-cover opacity-60">
             </div>
-            <div class="container mx-auto px-4 relative z-10">
-                <h2 class="text-4xl md:text-5xl font-bold mb-10">
+            <div class="container max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
                     My recent <span class="text-teal-custom">works</span>
                 </h2>
 
@@ -298,135 +433,258 @@
 
     <!-- Experience Section -->
     <section id="experience" class="bg-dark-bg text-white pt-[94px]">
-        <div class="container mx-auto px-4 py-16 md:py-20 relative">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10 relative">
             <!-- Decorative elements -->
-            <img src="assets/bg-images/Vector 186.png" alt="" class="absolute top-20 right-40 w-32 hidden md:block">
+            <img src="assets/bg-images/Vector 186.png" alt=""
+                class="absolute top-20 right-40 w-32 hidden lg:block opacity-60">
 
-            <h2 class="text-4xl md:text-5xl font-bold mb-10">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
                 Experience
             </h2>
 
-            <!-- Experience Tabs Container -->
-            <div class="flex flex-col md:flex-row gap-8">
-                <!-- Left side - Company Tabs -->
-                <div class="md:w-1/4">
-                    <div class="company-tabs space-y-4">
-                        <div class="company-tab active" data-tab="got2-india">
-                            <div
-                                class="p-4 rounded-lg bg-black/30 backdrop-blur-sm border-l-4 border-gray-700  cursor-pointer hover:bg-black/40 transition-all duration-300">
-                                <div class="text-white font-semibold text-xl">Vizograph Solutions</div>
-                                <div class="text-gray-400 text-sm">Full Stack Developer</div>
-                            </div>
+            <!-- Experience Tabs Layout -->
+            <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+                <!-- Left Sidebar - Company Tabs -->
+                <div
+                    class="flex flex-row md:flex-col gap-3 md:w-1/4 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
+                    <button class="company-tab active whitespace-nowrap md:whitespace-normal" data-tab="vizograph">
+                        <div class="text-left">
+                            <div class="font-semibold text-base md:text-lg">Vizograph Solutions</div>
+                            <div class="text-sm text-slate-400 mt-1">Frontend Developer</div>
                         </div>
-                        <div class="company-tab" data-tab="company-2">
-                            <div
-                                class="p-4 rounded-lg bg-black/30 backdrop-blur-sm border-l-4 border-gray-700 cursor-pointer hover:bg-black/40 transition-all duration-300">
-                                <div class="text-white font-semibold text-xl">Wanbuffer Services</div>
-                                <div class="text-gray-400 text-sm">ReactJS Developer</div>
+                    </button>
+                    <button class="company-tab whitespace-nowrap md:whitespace-normal" data-tab="wanbuffer">
+                        <div class="text-left">
+                            <div class="font-semibold text-base md:text-lg">Wanbuffer Services</div>
+                            <div class="text-sm text-slate-400 mt-1">ReactJS Developer</div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Right Content Area -->
+                <div class="md:w-3/4">
+                    <!-- Vizograph Content -->
+                    <div class="experience-content active" id="vizograph-content">
+                        <div
+                            class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-5 md:p-6 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl md:text-2xl font-bold text-white">Frontend Developer</h3>
+                                    <p class="text-teal-custom font-semibold">Vizograph Solutions</p>
+                                </div>
+                                <div class="text-slate-400 text-sm md:text-right">
+                                    <div class="font-medium">Oct 2024 - Present</div>
+                                    <div>Ahmedabad, Gujarat</div>
+                                </div>
                             </div>
+
+                            <!-- Achievements -->
+                            <ul class="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed">
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Built an interactive chart editor using ApexCharts integration, enabling users
+                                        to create and customize 15+ chart types including bar, line, treemap, and bubble
+                                        charts with real-time preview.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Developed drag-and-resize UI functionality for chart layouts, allowing users
+                                        to
+                                        intuitively position and scale visualizations within canvas workspace.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Implemented dynamic dataset management system where users can add/remove
+                                        series
+                                        and rows, with automatic chart re-rendering and data validation.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Created multi-format export functionality (PNG, SVG, JPEG) using canvas
+                                        rendering, enabling users to download high-quality chart images for reports and
+                                        presentations.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Integrated light/dark mode theming support across the entire application, with
+                                        theme persistence and smooth transitions between color schemes.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Wanbuffer Content -->
+                    <div class="experience-content" id="wanbuffer-content">
+                        <div
+                            class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-5 md:p-6 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl md:text-2xl font-bold text-white">ReactJS Developer</h3>
+                                    <p class="text-teal-custom font-semibold">Wanbuffer Services</p>
+                                </div>
+                                <div class="text-slate-400 text-sm md:text-right">
+                                    <div class="font-medium">Sep 2023 - Aug 2024</div>
+                                    <div>Ahmedabad, Gujarat</div>
+                                </div>
+                            </div>
+
+                            <!-- Achievements -->
+                            <ul class="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed">
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Built a multilingual digital contract management platform supporting English,
+                                        Arabic, French, and Spanish for individual and business users.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Developed contract creation and management features with seamless integration
+                                        of
+                                        Google Drive and OneDrive for secure document storage.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Integrated Google and Microsoft OAuth for secure and user-friendly
+                                        authentication across multiple platforms.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Designed and implemented a real-time email verification tool with third-party
+                                        API integrations, enabling users to validate email addresses with ease.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Created a responsive, mobile-first "Spin and Win" web app with interactive
+                                        animations to drive user engagement during company events.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Developed an eCommerce website with a dynamic Mega Menu featuring smooth
+                                        transitions and real-time category data fetched via APIs.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
+                                    <span>Enhanced the overall user experience through clean UI/UX design, smooth
+                                        transitions, and real-time feedback across applications.</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Right side - Experience Content -->
-                <div class="md:w-3/4">
-                    <div class="experience-content-container">
-                        <div class="experience-content active" id="got2-india-content">
-                            <div class="bg-black/30 backdrop-blur-sm rounded-lg p-6 md:p-8">
-                                <div class="flex flex-col md:flex-row justify-between mb-6">
-                                    <h3 class="text-2xl font-bold mb-2 md:mb-0">Full Stack Developer @ Vizograph
-                                        Solutions
-                                    </h3>
-                                    <div class="text-gray-400">
-                                        <div>Oct 2024 - Present</div>
-                                        <div>Ahmedabad, Gujarat</div>
-                                    </div>
-                                </div>
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="bg-dark-bg text-white py-10">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
+                Tech <span class="text-teal-custom">Stack</span>
+            </h2>
 
-                                <!-- Achievements/Responsibilities -->
-                                <ul class="space-y-4 text-gray-300">
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Built an easy-to-use chart editor with ApexCharts.js that lets users create,
-                                        customize, and visualize different types of charts effortlessly.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Designed an intuitive drag-and-resize interface, enabling seamless customization
-                                        of chart layouts and enhancing overall usability.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Implemented dynamic series and row addition, giving users flexibility to expand
-                                        and fine-tune their data visualizations in real time.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Developed interactive color customization features, allowing users to modify
-                                        individual chart elements such as bars, treemap, bubble and more for better
-                                        clarity and visual appeal.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Added multi-format export options, enabling users to download their projects in
-                                        multiple formats such as PNG, SVG, and JPEG for versatile usage.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="max-w-5xl mx-auto">
+                <!-- Frontend -->
+                <div class="tech-category mb-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-white">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">React</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">JavaScript</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Tailwind
+                            CSS</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Bootstrap</span>
+                    </div>
+                </div>
 
-                        <div class="experience-content hidden" id="company-2-content">
-                            <div class="bg-black/30 backdrop-blur-sm rounded-lg p-6 md:p-8">
-                                <div class="flex flex-col md:flex-row justify-between mb-6">
-                                    <h3 class="text-2xl font-bold mb-2 md:mb-0">ReactJS Developer @ Wanbuffer Services
-                                    </h3>
-                                    <div class="text-gray-400">
-                                        <div>Sep 2023 - Aug 2024</div>
-                                        <div>Ahmedabad, Gujarat</div>
-                                    </div>
-                                </div>
+                <!-- State Management -->
+                <div class="tech-category mb-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-white">State Management</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Redux
+                            Toolkit</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Zustand</span>
+                    </div>
+                </div>
 
-                                <!-- Achievements/Responsibilities -->
-                                <ul class="space-y-4 text-gray-300">
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Built a multilingual digital contract management platform supporting English,
-                                        Arabic, French, and Spanish for individual and business users.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Developed contract creation and management features with seamless integration of
-                                        Google Drive and OneDrive for secure document storage.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Integrated Google and Microsoft OAuth for secure and user-friendly
-                                        authentication across multiple platforms.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Designed and implemented a real-time email verification tool with third-party
-                                        API integrations, enabling users to validate email addresses with ease.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Created a responsive, mobile-first “Spin and Win” web app with interactive
-                                        animations to drive user engagement during company events.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Developed an eCommerce website with a dynamic Mega Menu featuring smooth
-                                        transitions and real-time category data fetched via APIs.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2">›</span>
-                                        Enhanced the overall user experience through clean UI/UX design, smooth
-                                        transitions, and real-time feedback across applications.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <!-- Backend -->
+                <div class="tech-category mb-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-white">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Node.js</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Express.js</span>
+                    </div>
+                </div>
 
+                <!-- Database -->
+                <div class="tech-category mb-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
+                            </path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-white">Database</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Services -->
+                <div class="tech-category mb-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-white">Tools & Services</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Git</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">GitHub</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">AWS
+                            S3</span>
+                        <span
+                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">ApexCharts</span>
                     </div>
                 </div>
             </div>
@@ -434,9 +692,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-dark-bg text-white pt-[94px] pb-16">
-        <div class="container mx-auto px-4 py-16">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+    <section id="contact" class="bg-dark-bg text-white pt-[94px] pb-12">
+        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
                 <!-- Left Content with Images -->
                 <div class="w-full md:w-1/2 relative">
                     <div class="relative z-10">
@@ -463,24 +721,27 @@
                     <form id="contact-form" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="user_name" class="block text-sm font-medium mb-2">Your name</label>
+                                <label for="user_name" class="block text-sm font-medium mb-2 text-slate-300">Your
+                                    name</label>
                                 <input type="text" id="user_name" autocomplete="off" name="user_name" placeholder="Name"
-                                    class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-custom"
+                                    class="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-custom focus:border-teal-custom transition-all duration-200"
                                     required>
                             </div>
                             <div>
-                                <label for="user_email" class="block text-sm font-medium mb-2">Your email</label>
+                                <label for="user_email" class="block text-sm font-medium mb-2 text-slate-300">Your
+                                    email</label>
                                 <input type="email" id="user_email" autocomplete="off" name="user_email"
                                     placeholder="Email"
-                                    class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-custom"
+                                    class="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-custom focus:border-teal-custom transition-all duration-200"
                                     required>
                             </div>
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Message" autocomplete="off"
-                                class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-custom"
+                            <label for="message" class="block text-sm font-medium mb-2 text-slate-300">Your
+                                Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Message" autocomplete="off"
+                                class="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-custom focus:border-teal-custom transition-all duration-200 resize-none"
                                 required></textarea>
                         </div>
 

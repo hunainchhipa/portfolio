@@ -191,8 +191,8 @@ This project is open source and available for personal use.
 ## Contact
 
 **Hunain Chhipa**
-- Email: Your email here
-- LinkedIn: Your LinkedIn URL
+- Email: hunain.chhipa23@gmail.com
+- LinkedIn: https://www.linkedin.com/in/hunainchhipa
 - GitHub: https://github.com/hunainchhipa
 
 ---

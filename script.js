@@ -71,6 +71,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 document.querySelectorAll(".project-card").forEach((card) => {
   const video = card.querySelector(".project-video");
+  if (!video) return;
   let playPromise;
 
   card.addEventListener("mouseenter", () => {
@@ -113,24 +114,44 @@ const modalUrl = document.getElementById("modal-url");
 const closeModalBtn = document.getElementById("close-modal");
 
 // Attach click event to each project card
+const modalVideoWrapper = document.getElementById("modal-video-wrapper");
 const projectCards = document.querySelectorAll(".project-card");
 projectCards.forEach((card, idx) => {
   card.addEventListener("click", () => {
+    // Resolve by slug so card order and data order stay independent
+    const project =
+      projectData.find((p) => p.id === card.dataset.project) || projectData[idx];
+    if (!project) return;
     document.body.classList.add("overflow-hidden");
-    const project = projectData[idx];
 
     // Set basic info
-    modalVideo.src = project?.video;
-    modalTitle.textContent = project?.title;
-    modalDescription.textContent = project?.description;
-    modalUrl.href = project?.url;
+    modalTitle.textContent = project.title;
+    modalDescription.textContent = project.description;
+
+    // Video is optional
+    if (project.video) {
+      modalVideo.src = project.video;
+      modalVideoWrapper.classList.remove("hidden");
+    } else {
+      modalVideo.removeAttribute("src");
+      modalVideoWrapper.classList.add("hidden");
+    }
+
+    // External link is optional
+    if (project.url) {
+      modalUrl.href = project.url;
+      modalUrl.classList.remove("hidden");
+    } else {
+      modalUrl.removeAttribute("href");
+      modalUrl.classList.add("hidden");
+    }
 
     // Clear previous technologies and features
     modalTechnologies.innerHTML = "";
     modalFeatures.innerHTML = "";
 
     // Add technologies
-    project?.technologies.forEach((tech) => {
+    project.technologies.forEach((tech) => {
       const techBadge = document.createElement("span");
       techBadge.className =
         "px-3 py-1 bg-[#363C44] text-white text-sm rounded-full";
@@ -139,7 +160,7 @@ projectCards.forEach((card, idx) => {
     });
 
     // Add features
-    project?.features.forEach((feature) => {
+    project.features.forEach((feature) => {
       const featureItem = document.createElement("li");
       featureItem.textContent = feature;
       modalFeatures.appendChild(featureItem);

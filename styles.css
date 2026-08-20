@@ -326,3 +326,15 @@ p {
 .experience-card:hover {
   transform: translateX(4px);
 }
+
+/* Placeholder cards for projects without media yet */
+.project-placeholder {
+  min-height: 180px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .project-placeholder {
+    min-height: 140px;
+  }
+}

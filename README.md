@@ -1,22 +1,20 @@
 # Portfolio Website
 
-A modern, responsive portfolio website showcasing professional experience, projects, and technical skills. Built with vanilla JavaScript and styled with Tailwind CSS.
+A modern, responsive portfolio website showcasing professional experience, projects, and technical skills. Built with vanilla HTML, CSS and JavaScript, no framework or build step.
 
 ## Features
 
 - **Responsive Design**: Mobile-first approach with seamless experience across all devices
-- **Interactive UI**: Smooth animations, hover effects, and dynamic content loading
-- **Experience Tabs**: Clean tabbed interface for viewing work experience
-- **Project Showcase**: Video previews and detailed project modals
-- **Tech Stack Display**: Organized technology proficiencies by category
-- **Contact Form**: EmailJS integration for direct communication
-- **Dark Theme**: Modern slate color palette with teal accents
+- **Motion**: Letter-by-letter hero reveal, variable-font width on hover, live mini charts on project cards, scroll reveals (all disabled under reduced motion)
+- **Selected Work**: Vizantra, StyleCreation and ApexCharts Editor
+- **Contact Form**: EmailJS integration with inline status messages
+- **Light & Dark**: Stone and brass palette that follows the system theme
 
 ## Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Tailwind CSS (via CDN)
-- **Icons**: Font Awesome
+- **Styling**: Hand-written CSS with design tokens
+- **Fonts**: Archivo, Hanken Grotesk, JetBrains Mono (Google Fonts)
 - **Email Service**: EmailJS
 - **Hosting**: Firebase Hosting
 
@@ -27,7 +25,7 @@ portfolio/
 ├── index.html              # Main HTML file
 ├── styles.css             # Custom CSS styles
 ├── script.js              # JavaScript functionality
-├── data.js                # Project data
+├── demos.js               # Self-playing product demos (Vizantra, StyleCreation, ApexCharts Editor)
 ├── assets/                # Images, videos, and icons
 ├── public/                # Firebase public directory
 ├── firebase.json          # Firebase configuration

@@ -4,995 +4,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunain Chhipa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/bg-images/favicon.png">
+    <title>Hunain Chhipa | Full-Stack Engineer</title>
+    <meta name="description"
+        content="Hunain Chhipa is a full-stack engineer in Ahmedabad building production web apps and SaaS products with React, Next.js, Node.js and PostgreSQL.">
+    <link rel="icon" type="image/png" href="/assets/bg-images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        'teal-custom': '#4ECDC4',
-                        'dark-bg': '#222831',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="backdrop-blur-xl text-white px-5 py-8 border-b-2 border-[#363C44] fixed w-full top-0 z-50">
-        <div class="container mx-auto flex md:flex-row justify-between items-center">
-            <a href="#home" class="text-xl font-bold cursor-pointer">Hunain Chhipa</a>
-            <button id="menu-toggle" class="md:hidden focus:outline-none z-50">
-                <span id="hamburger-icon" class="block">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </span>
-                <span id="close-icon" class="hidden">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </span>
+    <header class="nav" id="nav">
+        <div class="wrap">
+            <a class="mark" href="#top">hunain<span>.</span></a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Open menu">
+                <span></span><span></span>
             </button>
-            <div id="menu" class="hidden md:flex space-x-6">
-                <a href="#about" class="hover:text-gray-300 transition duration-300">About Me</a>
-                <a href="#projects" class="hover:text-gray-300 transition duration-300">Projects</a>
-                <a href="#experience" class="hover:text-gray-300 transition duration-300">Experience</a>
-                <a href="#contact" class="hover:text-gray-300 transition duration-300">Contact</a>
-            </div>
-            <div id="mobile-menu"
-                class="fixed inset-0 bg-[#222831] bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-2xl font-semibold transition-transform duration-500 ease-in-out transform -translate-y-full md:hidden z-40 overflow-auto">
-                <a href="#about"
-                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">About Me</a>
-                <a href="#projects"
-                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Projects</a>
-                <a href="#experience"
-                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Experience</a>
-                <a href="#contact"
-                    class="hover:text-teal-custom transition-all duration-300 w-full text-center py-3">Contact</a>
-            </div>
+            <ul id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-dark-bg text-white pt-[94px]">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10 relative hero-fade-in">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-                <!-- Left Content -->
-                <div class="md:w-1/2 z-10 mb-12 md:mb-0">
-                    <div class="relative">
-                        <img src="/assets/bg-images/Vector 187.png" alt="" class="absolute md:block hidden top-16">
-                        <h1 class="text-4xl md:text-5xl font-bold leading-tight md:ms-20 text-center md:text-start">
-                            <span class="text-teal-custom block whitespace-nowrap">AI-Augmented</span>
-                            <span class="text-teal-custom block mt-1">Full-Stack Engineer</span>
-                        </h1>
-                        <p class="text-white text-xl md:text-2xl font-semibold mt-3 md:ms-20 text-center md:text-start">
-                            React, Next.js &amp; Modern Backend
-                        </p>
-                        <p
-                            class="text-slate-300 text-base md:text-lg mt-4 md:ms-20 text-center md:text-start max-w-2xl leading-relaxed">
-                            Building production web applications and SaaS products across frontend, backend,
-                            databases, and integrations.
-                        </p>
-                    </div>
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero wrap">
+            <h1 class="name" id="name" aria-label="Hunain Chhipa">
+                <span class="line" aria-hidden="true">Hunain</span>
+                <span class="line" aria-hidden="true">Chhipa</span>
+            </h1>
 
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4 md:ms-20">
-                        <a href="#contact"
-                            class="bg-teal-custom text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition duration-300">Hire
-                            me</a>
-                        <a href="/assets/HunainChhipa1.3.pdf" download
-                            class="bg-transparent border border-gray-600 text-white px-6 py-3 rounded-full font-medium hover:border-gray-400 transition duration-300 flex items-center gap-2">
-                            Download CV
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            <div class="hero-foot">
+                <p class="role">Full-stack engineer building <em>production</em> web apps and SaaS products.</p>
+                <div class="hero-side">
+                    <p>React and Next.js on the front, Node, Hono and Postgres behind it. I take products from schema
+                        to shipped UI, and I stay on through debugging, testing and delivery.</p>
+                    <div class="actions">
+                        <a class="btn" href="#contact">Hire me
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path d="M4 12 12 4M5 4h7v7" />
+                            </svg>
+                        </a>
+                        <a class="btn ghost" href="/assets/Hunain_Chhipa.pdf" download="Hunain-Chhipa-CV.pdf">Download
+                            CV
+                            <svg class="down" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path d="M8 2v9M4 7l4 4 4-4M3 14h10" />
                             </svg>
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Right Content - Illustration -->
-                <div class="md:w-1/2 relative">
-                    <!-- Doodles background -->
-                    <img src="assets/bg-images/doodles mixed round.png" alt=""
-                        class="absolute inset-0 w-full h-full object-contain z-0">
-                    <img src="assets/bg-images/Ellipse 3.png" alt="" class="absolute bottom-20 right-10 w-[50%]">
+            <div class="facts">
+                <div class="fact"><b>3+</b><span>years shipping</span></div>
+                <div class="fact"><b>10+</b><span>projects built</span></div>
+                <div class="fact"><b>3</b><span>apps in production</span></div>
+            </div>
+        </section>
 
-                    <!-- Main illustration -->
-                    <div class="relative z-10 flex justify-end">
-                        <img src="assets/bg-images/Group 2346.png" alt="Designer illustration"
-                            class="max-w-full h-auto">
+        <div class="marquee" aria-hidden="true">
+            <div class="track" id="track"></div>
+        </div>
+
+        <!-- About -->
+        <section class="block wrap" id="about">
+            <div class="about">
+                <div class="about-side">
+                    <span class="label">About</span>
+                    <div class="profile">
+                        <img class="avatar" src="assets/project-images/me-avatar.jpg" alt="Hunain Chhipa" width="256"
+                            height="256" loading="lazy">
+                        <div>
+                            <strong>Hunain Chhipa</strong>
+                            <span>Full-stack engineer</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section id="stats" class="bg-dark-bg text-white py-10">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                <!-- Stat 1: Years of Experience -->
-                <div
-                    class="stats-card bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-teal-custom transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-custom/20">
-                    <div class="text-4xl md:text-5xl font-bold text-teal-custom mb-2">
-                        3+</div>
-                    <div class="text-lg font-semibold text-white mb-1">Years</div>
-                    <div class="text-sm text-slate-400">Professional Experience</div>
-                </div>
-
-                <!-- Stat 2: Projects -->
-                <div
-                    class="stats-card bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-teal-custom transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-custom/20">
-                    <div class="text-4xl md:text-5xl font-bold text-teal-custom mb-2">
-                        10+</div>
-                    <div class="text-lg font-semibold text-white mb-1">Projects</div>
-                    <div class="text-sm text-slate-400">Built</div>
-                </div>
-
-                <!-- Stat 3: Production Systems -->
-                <div
-                    class="stats-card bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-teal-custom transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-custom/20">
-                    <div class="text-4xl md:text-5xl font-bold text-teal-custom mb-2">
-                        3+</div>
-                    <div class="text-lg font-semibold text-white mb-1">Production</div>
-                    <div class="text-sm text-slate-400">Applications</div>
+                <div class="about-copy reveal">
+                    <p class="lede">I started with <strong>React</strong> and grew into the whole stack: APIs,
+                        databases, auth and the architecture that ties them together.</p>
+                    <p>Today I work across Next.js, Node.js, Hono, MongoDB, PostgreSQL and Drizzle. My recent work
+                        includes <a href="#work">Vizantra</a>, an analytics and reporting SaaS for agencies,
+                        <a href="#work">StyleCreation</a>, a system that runs a garment production floor, and the
+                        <a href="#work">ApexCharts Editor</a>, a no-code chart builder.
+                    </p>
+                    <p>I care about shipping things that hold up in production. I own the architecture, the technical
+                        decisions, the debugging and the tests, and I move quickly from an idea to something people
+                        actually use.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="bg-dark-bg text-white pt-[94px]">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10 relative">
-            <!-- Decorative elements -->
-            <img src="assets/bg-images/lightbulb.png" alt=""
-                class="absolute top-12 left-[300px] w-16 hidden lg:block z-10 opacity-80">
-            <img src="assets/bg-images/Vector 186.png" alt=""
-                class="absolute bottom-10 left-40 w-32 hidden lg:block opacity-60">
-
-            <div class="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12">
-                <!-- Left Content -->
-                <div class="w-full md:w-[55%] lg:w-[500px]">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5">
-                        About <span class="text-teal-custom">me</span>
-                    </h2>
-                    <p class="text-slate-300 mb-4 leading-relaxed">
-                        I'm a Full-Stack Engineer focused on building production web applications and SaaS products.
-                    </p>
-                    <p class="text-slate-300 mb-4 leading-relaxed">
-                        I started with React.js and progressed into full-stack development, working with Next.js,
-                        Node.js, Hono, MongoDB, PostgreSQL, Drizzle and modern application architecture.
-                    </p>
-                    <p class="text-slate-300 leading-relaxed">
-                        My recent work includes <span class="text-teal-custom font-semibold">StyleCreation</span>, a
-                        full-stack factory management system, and
-                        <span class="text-teal-custom font-semibold">Vizantra</span>, an analytics and reporting SaaS
-                        platform. I use AI-augmented development workflows to move rapidly from ideas to production
-                        while staying responsible for architecture, technical decisions, debugging, testing and
-                        delivery.
-                    </p>
+        <!-- Work -->
+        <section class="block wrap tight" id="work">
+            <div class="head">
+                <div>
+                    <span class="label">Selected work</span>
+                    <h2>Three products in the wild</h2>
                 </div>
+                <p>Analytics, operations and data visualization, built from database schema to the last interaction.</p>
+            </div>
 
-                <!-- Right Content - Illustration (takes remaining width) -->
-                <div class="w-full md:flex-1 relative md:h-[500px] hidden md:block">
-                    <!-- Doodles background -->
-                    <img src="assets/bg-images/doodle items.png" alt=""
-                        class="absolute inset-0 w-full h-full object-cover opacity-90 z-0">
-
-                    <!-- Main illustration -->
-                    <div class="relative z-10 flex justify-center items-center h-full">
-                        <img src="assets/bg-images/Group 62.png" alt="Developer at desk"
-                            class="w-full h-full object-contain">
-                        <img src="assets/bg-images/Ellipse 3.png" alt="" class="absolute -bottom-4 left-[25%] w-[50%]">
+            <div class="featured">
+                <article class="case reveal">
+                    <div class="case-copy">
+                        <div class="case-top">
+                            <span class="label">SaaS &middot; 2025 to now</span>
+                            <span class="pill live">Live</span>
+                        </div>
+                        <h3>Vizantra</h3>
+                        <p class="kind">Analytics &amp; reporting platform</p>
+                        <p>Connects GA4, Google Search Console, Google Ads, Meta Ads and Instagram, then turns that
+                            data into dashboards, branded reports and scheduled deliveries for every agency client.</p>
+                        <ul class="feat-list">
+                            <li>5 data source integrations</li>
+                            <li>Dashboard templates and KPI cards</li>
+                            <li>Drag-and-drop report builder</li>
+                            <li>Scheduled email reports</li>
+                            <li>White-label client portal</li>
+                            <li>Organization-based roles</li>
+                        </ul>
+                        <div class="stack">
+                            <span>Next.js</span><span>React</span><span>TypeScript</span><span>Hono</span><span>Drizzle</span><span>PostgreSQL</span><span>Neon</span>
+                        </div>
+                        <a class="btn ghost link" href="https://vizantra.com/" target="_blank"
+                            rel="noopener noreferrer">Visit vizantra.com
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path d="M4 12 12 4M5 4h7v7" />
+                            </svg>
+                        </a>
                     </div>
-                </div>
+                    <div class="demo" data-demo="vizantra" role="img"
+                        aria-label="Animated demo of Vizantra: connecting data sources, a live SEO dashboard, the report builder, scheduling and the client portal">
+                    </div>
+                </article>
+
+                <article class="case reveal">
+                    <div class="case-copy">
+                        <div class="case-top">
+                            <span class="label">Internal tool &middot; 2025</span>
+                            <span class="pill live">Live</span>
+                        </div>
+                        <h3>StyleCreation</h3>
+                        <p class="kind">Garment workflow management</p>
+                        <p>Tracks every garment lot from inward stock through thread cutting, samples, washing and
+                            alterations to delivery challans, in one system the factory team uses daily.</p>
+                        <ul class="feat-list">
+                            <li>Lot lifecycle and vendors</li>
+                            <li>Samples, sets and photos</li>
+                            <li>Washing and alterations</li>
+                            <li>Production analytics</li>
+                            <li>Delivery challans</li>
+                            <li>AWS S3 image storage</li>
+                        </ul>
+                        <div class="stack">
+                            <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Mongoose</span><span>AWS
+                                S3</span></div>
+                        <a class="btn ghost link" href="https://stylecreation.in" target="_blank"
+                            rel="noopener noreferrer">Visit stylecreation.in
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path d="M4 12 12 4M5 4h7v7" />
+                            </svg>
+                        </a>
+                        <p class="demo-note">Demo uses sample brands and figures.</p>
+                    </div>
+                    <div class="demo" data-demo="stylecreation" role="img"
+                        aria-label="Animated demo of StyleCreation: production dashboard, searching lots, receiving pieces on a lot and creating a delivery challan">
+                    </div>
+                </article>
+
+                <article class="case reveal">
+                    <div class="case-copy">
+                        <div class="case-top">
+                            <span class="label">Product &middot; 2024 to 2025</span>
+                            <span class="pill live">Live</span>
+                        </div>
+                        <h3>ApexCharts Editor</h3>
+                        <p class="kind">Interactive chart &amp; visualization editor</p>
+                        <p>A browser-based editor for building and styling charts without writing code. I built the
+                            frontend: the chart canvas, the data grid, every customization panel and the export flow.
+                        </p>
+                        <ul class="feat-list">
+                            <li>15+ chart types, line to treemap</li>
+                            <li>Drag-and-resize editing</li>
+                            <li>Row and column editing, CSV import</li>
+                            <li>Themes, palettes and shadows</li>
+                            <li>PNG, SVG and JPEG export</li>
+                            <li>Real-time preview</li>
+                        </ul>
+                        <div class="stack">
+                            <span>React</span><span>JavaScript</span><span>ApexCharts.js</span><span>Zustand</span><span>Tailwind
+                                CSS</span></div>
+                        <a class="btn ghost link" href="https://editor.apexcharts.com/c/new" target="_blank"
+                            rel="noopener noreferrer">Open the editor
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path d="M4 12 12 4M5 4h7v7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="demo" data-demo="apexcharts" role="img"
+                        aria-label="Animated demo of ApexCharts Editor: picking a chart, editing data, applying a dark theme, switching chart types and exporting">
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
 
-    <!-- Featured Projects Section -->
-    <section id="featured-project" class="bg-dark-bg text-white py-10">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
-                Featured <span class="text-teal-custom">Projects</span>
-            </h2>
+            <div class="also reveal">
+                <span class="label">Hackathon</span>
+                <p><strong>Odoo Hackathon finalist.</strong> Built a workspace and library management system with an
+                    admin panel, authentication, user management, booking, and paginated, filterable dashboards.</p>
+            </div>
+        </section>
 
-            <div class="max-w-4xl mx-auto space-y-6">
-                <!-- Primary: Vizantra -->
-                <div
-                    class="featured-project-card bg-gradient-to-br from-teal-custom/10 via-slate-800/60 to-purple-900/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-slate-700 hover:border-teal-custom/50 transition-all duration-300 shadow-xl">
+        <!-- Experience -->
+        <section class="block wrap tight" id="experience">
+            <div class="head">
+                <div>
+                    <span class="label">Experience</span>
+                    <h2>Where I've worked</h2>
+                </div>
+                <p>Three roles across two companies in Ahmedabad.</p>
+            </div>
 
-                    <!-- Project Title -->
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">
-                        Vizantra &mdash; Analytics &amp; Reporting SaaS
-                    </h3>
-
-                    <!-- Description -->
-                    <p class="text-slate-300 leading-relaxed mb-6">
-                        A production analytics and reporting platform for agencies, bringing marketing and website
-                        data into customizable dashboards and reports.
-                    </p>
-
-                    <!-- Key Features -->
-                    <div class="mb-6">
-                        <h4 class="text-sm font-semibold text-teal-custom mb-3 uppercase tracking-wider">
-                            Key Features
-                        </h4>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-slate-300 text-sm">
-                            <li class="flex items-start">
-                                <span class="text-teal-custom mr-2 mt-0.5">&bull;</span>
-                                <span>Multi-source analytics integrations</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-teal-custom mr-2 mt-0.5">&bull;</span>
-                                <span>Custom dashboards and templates</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-teal-custom mr-2 mt-0.5">&bull;</span>
-                                <span>Data visualization and reporting</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-teal-custom mr-2 mt-0.5">&bull;</span>
-                                <span>Organization-based architecture</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-teal-custom mr-2 mt-0.5">&bull;</span>
-                                <span>Authentication and role management</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-teal-custom mr-2 mt-0.5">&bull;</span>
-                                <span>Automated data processing</span>
-                            </li>
+            <div class="jobs">
+                <article class="job reveal">
+                    <div class="when"><span class="now"><span class="dot"></span>Sep 2025 to now</span><span>Ahmedabad,
+                            Gujarat</span></div>
+                    <div class="job-body">
+                        <h3>Full Stack Engineer <span>at Vizograph Solutions</span></h3>
+                        <ul>
+                            <li>Built StyleCreation, a full-stack factory management application with React, Node.js,
+                                Express.js and MongoDB.</li>
+                            <li>Developing Vizantra, an analytics and reporting SaaS platform on Next.js, Hono, Drizzle,
+                                PostgreSQL and Neon.</li>
+                            <li>Work across frontend, backend APIs, databases, authentication and third-party
+                                integrations.</li>
                         </ul>
                     </div>
-
-                    <!-- Tech Stack with bullet separators -->
-                    <div>
-                        <h4 class="text-sm font-semibold text-teal-custom mb-3 uppercase tracking-wider">
-                            Tech Stack
-                        </h4>
-                        <div class="flex flex-wrap items-center gap-2 text-slate-300 text-sm">
-                            <span class="font-medium">Next.js</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">React</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">TypeScript</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">Hono</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">Drizzle</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">PostgreSQL</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">Neon</span>
-                        </div>
+                </article>
+                <article class="job reveal">
+                    <div class="when"><span>Oct 2024 to Sep 2025</span><span>Ahmedabad, Gujarat</span></div>
+                    <div class="job-body">
+                        <h3>Frontend Developer <span>at Vizograph Solutions</span></h3>
+                        <ul>
+                            <li>Built an interactive chart editor with React and ApexCharts supporting 15+ chart types,
+                                real-time preview and multi-format export.</li>
+                            <li>Developed reusable UI components including drag-and-resize chart layouts, dynamic
+                                dataset management and light/dark theming.</li>
+                            <li>Integrated REST APIs, handling data fetching, validation and state across the
+                                application.</li>
+                        </ul>
                     </div>
+                </article>
+                <article class="job reveal">
+                    <div class="when"><span>Sep 2023 to Aug 2024</span><span>Ahmedabad, Gujarat</span></div>
+                    <div class="job-body">
+                        <h3>ReactJS Developer <span>at Wanbuffer Services</span></h3>
+                        <ul>
+                            <li>Built a multilingual contract management platform in English, Arabic, French and Spanish
+                                for individual and business users.</li>
+                            <li>Added Google Drive and OneDrive storage, plus Google and Microsoft OAuth sign-in.</li>
+                            <li>Shipped a real-time email verification tool on third-party APIs.</li>
+                            <li>Created a mobile-first "Spin and Win" app for company events, and an eCommerce mega menu
+                                fed by live category data.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Toolkit -->
+        <section class="block wrap tight" id="stack">
+            <div class="head">
+                <div>
+                    <span class="label">Toolkit</span>
+                    <h2>What I build with</h2>
+                </div>
+            </div>
+            <div class="skills reveal">
+                <div class="skill">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>shadcn/ui</li>
+                        <li>Zustand &amp; Redux Toolkit</li>
+                        <li>ApexCharts.js</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Hono</li>
+                        <li>REST APIs</li>
+                        <li>OAuth &amp; JWT</li>
+                        <li>AWS S3</li>
+                        <li>Git &amp; GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Database</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>Drizzle ORM</li>
+                        <li>Neon</li>
+                        <li>MongoDB &amp; Mongoose</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact -->
+    <footer class="contact" id="contact">
+        <div class="wrap">
+            <span class="label">Contact</span>
+            <h2>Got a project <em>in mind?</em></h2>
+
+            <div class="contact-grid">
+                <div class="mail">
+                    <div class="mail-line">
+                        <a href="mailto:hunain.chhipa23@gmail.com" id="email">hunain.chhipa23@gmail.com</a>
+                        <button class="copy" id="copy" type="button">Copy email</button>
+                    </div>
+                    <p>Tell me what you're building. I usually reply within a day.</p>
                 </div>
 
-                <!-- Secondary: StyleCreation -->
-                <div
-                    class="featured-project-card bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-slate-700 hover:border-teal-custom/50 transition-all duration-300 shadow-lg">
-
-                    <!-- Project Title -->
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">
-                        StyleCreation &mdash; Garment Workflow Management System
-                    </h3>
-
-                    <!-- Description -->
-                    <p class="text-slate-300 leading-relaxed mb-6">
-                        A production factory management application built for garment production workflows,
-                        inventory, samples, washing, alterations and production operations.
-                    </p>
-
-                    <!-- Tech Stack with bullet separators -->
-                    <div class="mb-6">
-                        <h4 class="text-sm font-semibold text-teal-custom mb-3 uppercase tracking-wider">
-                            Tech Stack
-                        </h4>
-                        <div class="flex flex-wrap items-center gap-2 text-slate-300 text-sm">
-                            <span class="font-medium">React</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">Node.js</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">Express.js</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">MongoDB</span>
-                            <span class="text-teal-custom">&bull;</span>
-                            <span class="font-medium">Mongoose</span>
-                        </div>
+                <form class="form" id="contact-form" novalidate>
+                    <div class="field">
+                        <input type="text" id="user_name" name="user_name" placeholder=" " autocomplete="name" required>
+                        <label for="user_name">Your name</label>
                     </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-3">
-                        <a href="https://stylecreation.in" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center px-5 py-2.5 bg-teal-custom text-white font-medium text-sm rounded-lg hover:bg-teal-500 transition-all duration-300 shadow-md hover:shadow-lg">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                </path>
+                    <div class="field">
+                        <input type="email" id="user_email" name="user_email" placeholder=" " autocomplete="email"
+                            required>
+                        <label for="user_email">Your email</label>
+                    </div>
+                    <div class="field">
+                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">What are you building?</label>
+                    </div>
+                    <div class="form-foot">
+                        <button class="btn" type="submit" id="send">Send message
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <path d="M4 12 12 4M5 4h7v7" />
                             </svg>
-                            Live Project
-                        </a>
+                        </button>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                     </div>
-                </div>
+                </form>
             </div>
-        </div>
-    </section>
 
-    <!-- Works Section -->
-    <section id="projects" class="bg-dark-bg text-white pt-[94px]">
-        <div class="relative py-10">
-            <div class="absolute inset-0 z-0">
-                <img src="assets/bg-images/work-bg.png" alt="" class="w-full h-full object-cover opacity-60">
-            </div>
-            <div class="container max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-                    My recent <span class="text-teal-custom">works</span>
-                </h2>
-
-                <!-- Projects Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Vizantra -->
-                    <div data-project="vizantra"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <div
-                            class="project-placeholder flex flex-col items-center justify-center text-center h-full w-full rounded-lg bg-gradient-to-br from-teal-custom/20 via-slate-800 to-slate-900 border border-slate-700 group-hover:border-teal-custom transition-colors duration-300 p-6">
-                            <span class="text-xl md:text-2xl font-bold text-white">Vizantra</span>
-                            <span class="text-xs md:text-sm text-teal-custom mt-2">Next.js &middot; Hono &middot;
-                                Drizzle &middot; PostgreSQL</span>
-                        </div>
-                    </div>
-                    <!-- StyleCreation -->
-                    <div data-project="stylecreation"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <div
-                            class="project-placeholder flex flex-col items-center justify-center text-center h-full w-full rounded-lg bg-gradient-to-br from-teal-custom/20 via-slate-800 to-slate-900 border border-slate-700 group-hover:border-teal-custom transition-colors duration-300 p-6">
-                            <span class="text-xl md:text-2xl font-bold text-white">StyleCreation</span>
-                            <span class="text-xs md:text-sm text-teal-custom mt-2">React &middot; Node.js &middot;
-                                Express.js &middot; MongoDB</span>
-                        </div>
-                    </div>
-                    <!-- Book Store -->
-                    <div data-project="book-store"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/book-store.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/book-store.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Store App -->
-                    <div data-project="store-app"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/store-app.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/store-app.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Task Manager -->
-                    <div data-project="task-manager"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/task-manager.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/task-manager.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- JWT Authentication -->
-                    <div data-project="jwt-authentication"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/jwt-authentication.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/jwt-authentication.mov" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Mattermark -->
-                    <div data-project="mattermark"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/mattermark.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/mattermark.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- The Mad Hatter -->
-                    <div data-project="the-mad-hatter"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/the-mad-hatter.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/the-mad-hatter.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Good Life Coaches -->
-                    <div data-project="good-life-coaches"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/good-life-coaches.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/good-life-coaches.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Music Player -->
-                    <div data-project="music-player"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/music-player.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/music-player.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Pig Game -->
-                    <div data-project="pig-game"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/pig-game.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/pig-game.mp4" muted disablepictureinpicture disableremoteplayback
-                            playsinline loop preload="none"></video>
-                    </div>
-                    <!-- Guess My Number -->
-                    <div data-project="guess-my-number"
-                        class="project-card cursor-pointer group relative overflow-hidden rounded-lg shadow-2xl bg-black/30 backdrop-blur-sm p-10">
-                        <img src="assets/project-images/guess-my-number.png" alt="image"
-                            class="project-image h-full w-full object-cover transition-opacity duration-300 md:group-hover:opacity-0" />
-                        <video
-                            class="project-video absolute top-0 left-0 h-full w-full object-cover opacity-0 md:group-hover:opacity-100 transition-opacity duration-300  shadow-2xl p-10 hidden md:block"
-                            src="assets/project-videos/guess-my-number.mp4" muted disablepictureinpicture
-                            disableremoteplayback playsinline loop preload="none"></video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Experience Section -->
-    <section id="experience" class="bg-dark-bg text-white pt-[94px]">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10 relative">
-            <!-- Decorative elements -->
-            <img src="assets/bg-images/Vector 186.png" alt=""
-                class="absolute top-20 right-40 w-32 hidden lg:block opacity-60">
-
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-                Experience
-            </h2>
-
-            <!-- Experience Tabs Layout -->
-            <div class="flex flex-col md:flex-row gap-6 md:gap-8">
-                <!-- Left Sidebar - Company Tabs -->
-                <div
-                    class="flex flex-row md:flex-col gap-3 md:w-1/4 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
-                    <button class="company-tab active whitespace-nowrap md:whitespace-normal" data-tab="vizograph">
-                        <div class="text-left">
-                            <div class="font-semibold text-base md:text-lg">Vizograph Solutions</div>
-                            <div class="text-sm text-slate-400 mt-1">Full Stack Engineer</div>
-                        </div>
-                    </button>
-                    <button class="company-tab whitespace-nowrap md:whitespace-normal" data-tab="wanbuffer">
-                        <div class="text-left">
-                            <div class="font-semibold text-base md:text-lg">Wanbuffer Services</div>
-                            <div class="text-sm text-slate-400 mt-1">ReactJS Developer</div>
-                        </div>
-                    </button>
-                </div>
-
-                <!-- Right Content Area -->
-                <div class="md:w-3/4">
-                    <!-- Vizograph Content -->
-                    <div class="experience-content active" id="vizograph-content">
-                        <div class="space-y-5">
-                            <!-- Current role -->
-                            <div
-                                class="experience-card bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-5 md:p-6 shadow-lg">
-                                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
-                                    <div>
-                                        <h3 class="text-xl md:text-2xl font-bold text-white">Full Stack Engineer</h3>
-                                        <p class="text-teal-custom font-semibold">Vizograph Solutions</p>
-                                    </div>
-                                    <div class="text-slate-400 text-sm md:text-right">
-                                        <div class="font-medium">Sep 2025 - Present</div>
-                                        <div>Ahmedabad, Gujarat</div>
-                                    </div>
-                                </div>
-
-                                <!-- Achievements -->
-                                <ul class="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed">
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">&bull;</span>
-                                        <span>Built StyleCreation, a full-stack factory management application using
-                                            React, Node.js, Express.js and MongoDB.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">&bull;</span>
-                                        <span>Developing Vizantra, an analytics/reporting SaaS platform using Next.js,
-                                            Hono, Drizzle, PostgreSQL and Neon.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">&bull;</span>
-                                        <span>Work across frontend, backend APIs, databases, authentication,
-                                            integrations and AI-augmented development.</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Previous role at the same company -->
-                            <div
-                                class="experience-card bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700 p-5 md:p-6 shadow-lg">
-                                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
-                                    <div>
-                                        <h3 class="text-lg md:text-xl font-bold text-white">Frontend Developer</h3>
-                                        <p class="text-teal-custom font-semibold">Vizograph Solutions</p>
-                                    </div>
-                                    <div class="text-slate-400 text-sm md:text-right">
-                                        <div class="font-medium">Oct 2024 - Sep 2025</div>
-                                        <div>Ahmedabad, Gujarat</div>
-                                    </div>
-                                </div>
-
-                                <!-- Achievements -->
-                                <ul class="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed">
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">&bull;</span>
-                                        <span>Built an interactive chart editor with React.js and ApexCharts, supporting
-                                            15+ chart types with real-time preview and multi-format export.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">&bull;</span>
-                                        <span>Developed reusable UI components including drag-and-resize chart layouts,
-                                            dynamic dataset management and light/dark theming.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">&bull;</span>
-                                        <span>Integrated REST APIs with JavaScript and React, handling data fetching,
-                                            validation and state across the application.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Wanbuffer Content -->
-                    <div class="experience-content" id="wanbuffer-content">
-                        <div
-                            class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-5 md:p-6 shadow-lg">
-                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
-                                <div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-white">ReactJS Developer</h3>
-                                    <p class="text-teal-custom font-semibold">Wanbuffer Services</p>
-                                </div>
-                                <div class="text-slate-400 text-sm md:text-right">
-                                    <div class="font-medium">Sep 2023 - Aug 2024</div>
-                                    <div>Ahmedabad, Gujarat</div>
-                                </div>
-                            </div>
-
-                            <!-- Achievements -->
-                            <ul class="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed">
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Built a multilingual digital contract management platform supporting English,
-                                        Arabic, French, and Spanish for individual and business users.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Developed contract creation and management features with seamless integration
-                                        of
-                                        Google Drive and OneDrive for secure document storage.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Integrated Google and Microsoft OAuth for secure and user-friendly
-                                        authentication across multiple platforms.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Designed and implemented a real-time email verification tool with third-party
-                                        API integrations, enabling users to validate email addresses with ease.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Created a responsive, mobile-first "Spin and Win" web app with interactive
-                                        animations to drive user engagement during company events.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Developed an eCommerce website with a dynamic Mega Menu featuring smooth
-                                        transitions and real-time category data fetched via APIs.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-teal-custom mr-2 mt-1 flex-shrink-0">•</span>
-                                    <span>Enhanced the overall user experience through clean UI/UX design, smooth
-                                        transitions, and real-time feedback across applications.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="tech-stack" class="bg-dark-bg text-white py-10">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
-                Tech <span class="text-teal-custom">Stack</span>
-            </h2>
-
-            <div class="max-w-5xl mx-auto">
-                <!-- Frontend -->
-                <div class="tech-category mb-6">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-white">Frontend</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">React</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Next.js</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">JavaScript</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">TypeScript</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Tailwind
-                            CSS</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">shadcn/ui</span>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="tech-category mb-6">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
-                            </path>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-white">Backend</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Node.js</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Express.js</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Hono</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">REST
-                            APIs</span>
-                    </div>
-                </div>
-
-                <!-- Database &amp; ORM -->
-                <div class="tech-category mb-6">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
-                            </path>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-white">Database &amp; ORM</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">PostgreSQL</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">MongoDB</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Neon</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Drizzle
-                            ORM</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Mongoose</span>
-                    </div>
-                </div>
-
-                <!-- AI &amp; Development -->
-                <div class="tech-category">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 text-teal-custom mr-3" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
-                            </path>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-white">AI &amp; Development</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Claude
-                            Code</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">AI-Augmented
-                            Development</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI-Augmented Engineering Section -->
-    <section id="ai-engineering" class="bg-dark-bg text-white py-10">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">
-                AI-Augmented <span class="text-teal-custom">Engineering</span>
-            </h2>
-
-            <div class="max-w-4xl mx-auto">
-                <div
-                    class="featured-project-card bg-gradient-to-br from-teal-custom/10 via-slate-800/60 to-purple-900/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-slate-700 hover:border-teal-custom/50 transition-all duration-300 shadow-xl">
-                    <p class="text-slate-300 leading-relaxed mb-6">
-                        I use AI coding agents as part of my development workflow to accelerate implementation,
-                        debugging, refactoring and iteration while remaining responsible for architecture, technical
-                        decisions, validation and production delivery.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">Claude
-                            Code</span>
-                        <span
-                            class="tech-badge px-4 py-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:border-teal-custom hover:text-teal-custom transition-all duration-300 font-medium text-sm">AI-Augmented
-                            Development</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-dark-bg text-white pt-[94px] pb-12">
-        <div class="container max-w-6xl mx-auto px-6 lg:px-8 py-10">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-                <!-- Left Content with Images -->
-                <div class="w-full md:w-1/2 relative">
-                    <div class="relative z-10">
-                        <h2 class="text-5xl md:text-6xl font-bold mb-4">
-                            Got a project in
-                            <span class="text-teal-custom block">mind?</span>
-                        </h2>
-
-                        <!-- Person with chart illustration -->
-                        <div class="relative mt-8 flex justify-center">
-                            <img src="assets/bg-images/Group 2372.png" alt="Person with chart" class="" />
-
-                            <!-- Decorative elements -->
-                            <img src="assets/bg-images/Vector 186.png" alt=""
-                                class="absolute left-0 top-10 w-32 rotate-180" />
-                            <img src="assets/bg-images/Ellipse 3.png" alt=""
-                                class="absolute -bottom-3 left-[11rem] w-40" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Content - Contact Form -->
-                <div class="w-full md:w-1/2">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="user_name" class="block text-sm font-medium mb-2 text-slate-300">Your
-                                    name</label>
-                                <input type="text" id="user_name" autocomplete="off" name="user_name" placeholder="Name"
-                                    class="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-custom focus:border-teal-custom transition-all duration-200"
-                                    required>
-                            </div>
-                            <div>
-                                <label for="user_email" class="block text-sm font-medium mb-2 text-slate-300">Your
-                                    email</label>
-                                <input type="email" id="user_email" autocomplete="off" name="user_email"
-                                    placeholder="Email"
-                                    class="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-custom focus:border-teal-custom transition-all duration-200"
-                                    required>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium mb-2 text-slate-300">Your
-                                Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Message" autocomplete="off"
-                                class="w-full bg-slate-800/70 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-custom focus:border-teal-custom transition-all duration-200 resize-none"
-                                required></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit"
-                                class="bg-teal-custom hover:bg-teal-500 text-white font-medium rounded-md px-6 py-3 transition-colors duration-300 flex items-center">
-                                Send Message
-                                <i class="fa-solid fa-paper-plane ms-2"></i>
-                            </button>
-                        </div>
-                    </form>
-                    <div class="flex justify-end md:mt-8 me-8">
-                        <img src="/assets//bg-images/mail.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="w-full bg-dark-bg text-white pt-16 pb-8 border-t-2 border-[#363C44]">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col gap-5 justify-center items-center mb-10">
-                <div class="flex flex-wrap items-center justify-center gap-3 space-x-4 md:space-x-14 mb-4 md:mb-0">
-                    <a href="#about" class="text-white hover:text-teal-custom transition-colors"><i
-                            class="fa-solid fa-user me-2"></i> About me
-                    </a>
-                    <a href="#projects" class="text-white hover:text-teal-custom transition-colors"><i
-                            class="fa-solid fa-keyboard me-2"></i>
-                        My Work</a>
-                    <a href="#experience" class="text-white hover:text-teal-custom transition-colors"><i
-                            class="fa-solid fa-briefcase me-2"></i> Experience
-                    </a>
-                    <a href="#contact" class="text-white hover:text-teal-custom transition-colors"><i
-                            class="fa-solid fa-phone me-2"></i> Contact</a>
-                </div>
-
-                <div class="flex space-x-4 mb-4 md:mb-0">
-                    <a href="https://github.com/hunainchhipa" target="_blank" aria-label="GitHub"
-                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/hunainchhipa" target="_blank" aria-label="LinkedIn"
-                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://instagram.com/hunain_chhipa" target="_blank" aria-label="Instagram"
-                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/hunainchhipa_" target="_blank" aria-label="Twitter"
-                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-teal-custom transition-colors">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-
-            </div>
-            <div class="text-sm text-gray-400 text-center md:text-end">
-                <a href="#" class="hover:text-teal-custom transition-colors">Terms of Service</a> - <a href="#"
-                    class="hover:text-teal-custom transition-colors">Privacy Policy</a>
+            <nav class="socials" aria-label="Social profiles">
+                <a href="https://www.linkedin.com/in/hunainchhipa" target="_blank" rel="noopener noreferrer">LinkedIn
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M4 12 12 4M5 4h7v7" />
+                    </svg></a>
+                <a href="https://github.com/hunainchhipa" target="_blank" rel="noopener noreferrer">GitHub <svg
+                        viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M4 12 12 4M5 4h7v7" />
+                    </svg></a>
+                <a href="https://x.com/hunainchhipa_" target="_blank" rel="noopener noreferrer">X <svg
+                        viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M4 12 12 4M5 4h7v7" />
+                    </svg></a>
+                <a href="https://instagram.com/hunain_chhipa" target="_blank" rel="noopener noreferrer">Instagram <svg
+                        viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M4 12 12 4M5 4h7v7" />
+                    </svg></a>
+            </nav>
+            <div class="foot"><span>&copy; <span id="year">2026</span> Hunain Chhipa</span><span>Ahmedabad, India</span>
             </div>
         </div>
     </footer>
 
-    <div id="project-modal"
-        class="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-40 invisible opacity-0 transition-opacity duration-300">
-        <div class="w-full max-w-4xl h-[85vh] max-h-[85vh] bg-[#2A2C31] rounded-t-3xl p-6 transform translate-y-full transition-transform duration-500 overflow-y-auto relative"
-            id="modal-content">
-            <button id="close-modal"
-                class="absolute top-4 right-4 text-white text-2xl bg-[#222831] hover:bg-[#1c2129] h-10 w-10 rounded-full z-50 flex items-center justify-center transition-colors duration-300">&times;</button>
-
-            <!-- Project title with gradient underline -->
-            <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-white mb-6 pb-2 relative">
-                <span
-                    class="inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-teal-custom after:to-blue-500 after:mt-1"></span>
-            </h2>
-
-            <!-- Video section -->
-            <div class="mb-8" id="modal-video-wrapper">
-                <video id="modal-video" class="w-full max-w-4xl rounded-lg shadow-xl mx-auto" controls muted
-                    disablepictureinpicture disableremoteplayback playsinline loop></video>
-            </div>
-
-            <!-- Description section -->
-            <div class="mb-5 flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-teal-custom">Overview</h3>
-                <div class="text-center">
-                    <a id="modal-url" target="_blank"
-                        class="inline-flex items-center justify-center w-12 h-12 rounded-full text-white bg-teal-custom hover:bg-teal-500 transition-colors duration-300 shadow-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-external-link-icon lucide-external-link">
-                            <path d="M15 3h6v6" />
-                            <path d="M10 14 21 3" />
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <p id="modal-description" class="text-gray-300 leading-relaxed mb-8"></p>
-
-            <!-- Technologies section -->
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-teal-custom mb-3">Technologies</h3>
-                <div id="modal-technologies" class="flex flex-wrap gap-2">
-                    <!-- Technologies will be added here dynamically -->
-                </div>
-            </div>
-
-            <!-- Features section -->
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-teal-custom mb-3">Key Features</h3>
-                <ul id="modal-features" class="list-disc pl-5 text-gray-300 space-y-2">
-                    <!-- Features will be added here dynamically -->
-                </ul>
-            </div>
-        </div>
-    </div>
+    <script src="script.js" type="module"></script>
+    <script src="demos.js" type="module"></script>
 </body>
-
-<!-- EmailJS Implementation -->
-<script src="script.js" type="module"></script>
-
-<script type="text/javascript">
-        // Initialize EmailJS
-        (function () {
-            emailjs.init("P0T0AwGb7qYepWeHx"); // Your public key
-        })();
-
-    // Handle Form Submission
-    document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent form from refreshing the page
-
-            // Show sending status
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = `<span class=\"inline-block animate-pulse\">Sending...</span>`;
-            submitBtn.disabled = true;
-
-            // Send Email
-            emailjs.sendForm("service_povzevn", "template_rn2gimo", this)
-                .then(
-                    function () {
-                        // Success message
-                        alert("Message sent successfully!");
-                        document.getElementById("contact-form").reset();
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    },
-                    function (error) {
-                        // Error message
-                        alert("Failed to send the message. Please try again later.");
-                        console.error("Error:", error);
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    }
-                );
-        });
-</script>
 
 </html>

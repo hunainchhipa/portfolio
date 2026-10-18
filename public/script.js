@@ -1,217 +1,153 @@
-import { projectData } from "./data.js";
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const canHover = matchMedia("(hover: hover)").matches;
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: "smooth",
-        });
-      }
-    });
+// Hero name: split into letters for the load sequence and the width-on-hover effect
+const nameEl = document.getElementById("name");
+let charIndex = 0;
+nameEl.querySelectorAll(".line").forEach((line) => {
+  const word = line.textContent.trim();
+  line.textContent = "";
+  [...word].forEach((c) => {
+    const span = document.createElement("span");
+    span.className = "ch";
+    span.textContent = c;
+    span.style.setProperty("--i", charIndex++);
+    line.appendChild(span);
   });
 });
 
-// Hamburger/X toggle and overlay menu
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-const hamburgerIcon = document.getElementById("hamburger-icon");
-const closeIcon = document.getElementById("close-icon");
-let menuOpen = false;
+const chars = [...nameEl.querySelectorAll(".ch")];
+if (!reduceMotion && canHover) {
+  nameEl.addEventListener("pointermove", (e) => {
+    chars.forEach((ch) => {
+      const r = ch.getBoundingClientRect();
+      const d = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2));
+      const k = Math.max(0, 1 - d / 260);
+      ch.style.setProperty("--w", (100 + k * 25).toFixed(1));
+      ch.style.setProperty("--g", (800 + k * 100).toFixed(0));
+    });
+  });
+  nameEl.addEventListener("pointerleave", () => {
+    chars.forEach((ch) => {
+      ch.style.setProperty("--w", 100);
+      ch.style.setProperty("--g", 800);
+    });
+  });
+}
 
-menuToggle.addEventListener("click", () => {
-  menuOpen = !menuOpen;
-  if (menuOpen) {
-    mobileMenu.classList.remove("-translate-y-full");
-    mobileMenu.classList.add("translate-y-0");
-    hamburgerIcon.classList.add("hidden");
-    closeIcon.classList.remove("hidden");
-  } else {
-    mobileMenu.classList.remove("translate-y-0");
-    mobileMenu.classList.add("-translate-y-full");
-    hamburgerIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Stack marquee, doubled so the loop is seamless
+const stack = ["React", "Next.js", "TypeScript", "Node.js", "Hono", "PostgreSQL", "Drizzle", "MongoDB", "Express.js", "Tailwind CSS", "Neon"];
+document.getElementById("track").innerHTML = [...stack, ...stack].map((s) => `<span>${s}</span>`).join("");
+
+// Copy email
+const copyBtn = document.getElementById("copy");
+const emailEl = document.getElementById("email");
+copyBtn.addEventListener("click", () => {
+  const done = () => {
+    copyBtn.textContent = "Copied";
+    setTimeout(() => (copyBtn.textContent = "Copy email"), 1800);
+  };
+  const fallback = () => {
+    const range = document.createRange();
+    range.selectNodeContents(emailEl);
+    const sel = getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    copyBtn.textContent = "Selected, press Ctrl/Cmd+C";
+  };
+  try {
+    navigator.clipboard.writeText(emailEl.textContent).then(done, fallback);
+  } catch {
+    fallback();
   }
 });
 
-// Make sure this part of your code is working correctly
-mobileMenu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-y-0");
-    mobileMenu.classList.add("-translate-y-full");
-    hamburgerIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
-    menuOpen = false;
+// Contact form via EmailJS
+const form = document.getElementById("contact-form");
+const sendBtn = document.getElementById("send");
+const formStatus = document.getElementById("form-status");
+const setStatus = (text, kind = "") => {
+  formStatus.textContent = text;
+  formStatus.className = `form-status ${kind}`;
+};
 
-    // Add this line to ensure the body can scroll again if you've disabled it
-    document.body.classList.remove("overflow-hidden");
-  });
+if (window.emailjs) emailjs.init("P0T0AwGb7qYepWeHx");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) {
+    const firstInvalid = form.querySelector(":invalid");
+    setStatus(firstInvalid.type === "email" ? "Enter a valid email address." : "Fill in all three fields.", "err");
+    firstInvalid.focus();
+    return;
+  }
+  if (!window.emailjs) {
+    setStatus("The form couldn't load. Email me directly instead.", "err");
+    return;
+  }
+
+  sendBtn.disabled = true;
+  setStatus("Sending…");
+  emailjs
+    .sendForm("service_povzevn", "template_rn2gimo", form)
+    .then(() => {
+      form.reset();
+      setStatus("Message sent. I'll get back to you soon.", "ok");
+    })
+    .catch(() => setStatus("Couldn't send right now. Try again, or email me directly.", "err"))
+    .finally(() => (sendBtn.disabled = false));
 });
 
-// Smooth scrolling for anchor links (keep if you want smooth scroll)
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  });
+// Nav: border once scrolled, highlight the section in view
+const nav = document.getElementById("nav");
+
+// Mobile menu
+const menuToggle = document.getElementById("menu-toggle");
+const setMenu = (open) => {
+  nav.classList.toggle("open", open);
+  menuToggle.setAttribute("aria-expanded", open);
+  menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+};
+menuToggle.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+nav.querySelectorAll("ul a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && nav.classList.contains("open")) {
+    setMenu(false);
+    menuToggle.focus();
+  }
 });
-
-document.querySelectorAll(".project-card").forEach((card) => {
-  const video = card.querySelector(".project-video");
-  if (!video) return;
-  let playPromise;
-
-  card.addEventListener("mouseenter", () => {
-    video.currentTime = 0;
-    playPromise = video.play();
-
-    // Handle the play promise
-    if (playPromise !== undefined) {
-      playPromise.catch((error) => {
-        // Auto-play was prevented or interrupted
-        // We can ignore this error
-      });
-    }
-  });
-
-  card.addEventListener("mouseleave", () => {
-    // Only pause if the play promise has resolved
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          video.pause();
-          video.currentTime = 0;
-        })
-        .catch((error) => {
-          // Auto-play was prevented or interrupted
-          // We can ignore this error
-        });
-    }
-  });
+document.addEventListener("click", (e) => {
+  if (nav.classList.contains("open") && !nav.contains(e.target)) setMenu(false);
 });
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 8), { passive: true });
 
-const modal = document.getElementById("project-modal");
-const modalContent = document.getElementById("modal-content");
-const modalVideo = document.getElementById("modal-video");
-const modalTitle = document.getElementById("modal-title");
-const modalDescription = document.getElementById("modal-description");
-const modalTechnologies = document.getElementById("modal-technologies");
-const modalFeatures = document.getElementById("modal-features");
-const modalUrl = document.getElementById("modal-url");
-const closeModalBtn = document.getElementById("close-modal");
+const navLinks = [...nav.querySelectorAll("ul a")];
+const sectionObserver = new IntersectionObserver(
+  (entries) =>
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === `#${entry.target.id}`));
+    }),
+  { rootMargin: "-45% 0px -50% 0px" }
+);
+["about", "work", "experience", "contact"].forEach((id) => sectionObserver.observe(document.getElementById(id)));
 
-// Attach click event to each project card
-const modalVideoWrapper = document.getElementById("modal-video-wrapper");
-const projectCards = document.querySelectorAll(".project-card");
-projectCards.forEach((card, idx) => {
-  card.addEventListener("click", () => {
-    // Resolve by slug so card order and data order stay independent
-    const project =
-      projectData.find((p) => p.id === card.dataset.project) || projectData[idx];
-    if (!project) return;
-    document.body.classList.add("overflow-hidden");
-
-    // Set basic info
-    modalTitle.textContent = project.title;
-    modalDescription.textContent = project.description;
-
-    // Video is optional
-    if (project.video) {
-      modalVideo.src = project.video;
-      modalVideoWrapper.classList.remove("hidden");
-    } else {
-      modalVideo.removeAttribute("src");
-      modalVideoWrapper.classList.add("hidden");
-    }
-
-    // External link is optional
-    if (project.url) {
-      modalUrl.href = project.url;
-      modalUrl.classList.remove("hidden");
-    } else {
-      modalUrl.removeAttribute("href");
-      modalUrl.classList.add("hidden");
-    }
-
-    // Clear previous technologies and features
-    modalTechnologies.innerHTML = "";
-    modalFeatures.innerHTML = "";
-
-    // Add technologies
-    project.technologies.forEach((tech) => {
-      const techBadge = document.createElement("span");
-      techBadge.className =
-        "px-3 py-1 bg-[#363C44] text-white text-sm rounded-full";
-      techBadge.textContent = tech;
-      modalTechnologies.appendChild(techBadge);
-    });
-
-    // Add features
-    project.features.forEach((feature) => {
-      const featureItem = document.createElement("li");
-      featureItem.textContent = feature;
-      modalFeatures.appendChild(featureItem);
-    });
-
-    // Show modal with animation
-    modal.classList.remove("invisible", "opacity-0");
-    setTimeout(() => {
-      modal.classList.add("opacity-100");
-      modalContent.classList.remove("translate-y-full");
-    }, 10);
-  });
-});
-
-closeModalBtn.addEventListener("click", closeModal);
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) closeModal();
-});
-function closeModal() {
-  document.body.classList.remove("overflow-hidden");
-  modal.classList.remove("opacity-100");
-  modalContent.classList.add("translate-y-full");
-  setTimeout(() => {
-    modal.classList.add("invisible", "opacity-0");
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-  }, 300);
+// Reveal only what starts below the fold, so the first frame is always complete
+if (!reduceMotion && "IntersectionObserver" in window) {
+  const targets = [...document.querySelectorAll(".reveal, .head")].filter(
+    (el) => el.getBoundingClientRect().top > innerHeight
+  );
+  targets.forEach((el) => el.classList.add("reveal", "pre"));
+  const revealObserver = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove("pre");
+        revealObserver.unobserve(entry.target);
+      }),
+    { rootMargin: "0px 0px -8% 0px" }
+  );
+  targets.forEach((el) => revealObserver.observe(el));
 }
-
-// Experience Tabs Functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const companyTabs = document.querySelectorAll(".company-tab");
-
-  companyTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      // Remove active class from all tabs
-      companyTabs.forEach((t) => t.classList.remove("active"));
-
-      // Add active class to clicked tab
-      tab.classList.add("active");
-
-      // Hide all content sections
-      const allContent = document.querySelectorAll(".experience-content");
-      allContent.forEach((content) => content.classList.remove("active"));
-
-      // Show the corresponding content
-      const tabId = tab.getAttribute("data-tab");
-      const contentToShow = document.getElementById(`${tabId}-content`);
-      if (contentToShow) {
-        contentToShow.classList.add("active");
-      }
-    });
-  });
-});
